@@ -74,3 +74,5 @@ node_modules/
 /.ftpquota
 /php.ini
 docs/
+deploy-pull.sh
+auto-deploy.sh
