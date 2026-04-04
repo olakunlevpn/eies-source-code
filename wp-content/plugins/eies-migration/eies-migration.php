@@ -13,15 +13,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'EIES_MIGRATION_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EIES_MIGRATION_URL', plugin_dir_url( __FILE__ ) );
 
-// Moodle DB config - change for server deployment
-define( 'MOODLE_DB_HOST', 'localhost' );
-define( 'MOODLE_DB_NAME', 'moodle_eies' );
-define( 'MOODLE_DB_USER', 'root' );
-define( 'MOODLE_DB_PASS', '' );
+// Moodle DB config - auto-detect local vs server
+if ( file_exists( '/home/marceloeies/public_html/cursos/config.php' ) ) {
+	// Server environment
+	define( 'MOODLE_DB_HOST', 'localhost' );
+	define( 'MOODLE_DB_NAME', 'marceloeies_moodle' );
+	define( 'MOODLE_DB_USER', 'marceloeies_soporte' );
+	define( 'MOODLE_DB_PASS', 'WXVCfhz(AOSp' );
+	define( 'MOODLE_DATA_PATH', '/home/marceloeies/public_html/moodle-datos/filedir/' );
+} else {
+	// Local development
+	define( 'MOODLE_DB_HOST', 'localhost' );
+	define( 'MOODLE_DB_NAME', 'moodle_eies' );
+	define( 'MOODLE_DB_USER', 'root' );
+	define( 'MOODLE_DB_PASS', '' );
+	define( 'MOODLE_DATA_PATH', '' );
+}
 define( 'MOODLE_DB_PREFIX', 'mdl_' );
-
-// Moodle file path - change for server deployment
-define( 'MOODLE_DATA_PATH', '/home/marceloeies/public_html/moodle-datos/filedir/' );
 
 require_once EIES_MIGRATION_PATH . 'includes/class-migration-base.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-categories.php';
