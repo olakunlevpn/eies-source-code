@@ -73,3 +73,4 @@ __MACOSX/
 node_modules/
 /.ftpquota
 /php.ini
+docs/
