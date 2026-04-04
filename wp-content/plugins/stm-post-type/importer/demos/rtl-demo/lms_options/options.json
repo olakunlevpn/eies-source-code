@@ -1,0 +1,65 @@
+{
+    "main_color": "#fcb408",
+    "secondary_color": "#273044",
+    "currency_symbol": "",
+    "currency_position": "left",
+    "currency_thousands": ",",
+    "wocommerce_checkout": "",
+    "courses_page": "2",
+    "courses_view": "grid",
+    "courses_per_page": "8",
+    "course_card_view": "right",
+    "courses_categories_slug": "course",
+    "load_more_type": "button",
+    "user_url": "",
+    "user_url_profile": "",
+    "certificate_url": "",
+    "login_url": "",
+    "chat_url": "",
+    "wishlist_url": "",
+    "checkout_url": "",
+    "payment_methods": {
+        "cash": {
+            "enabled": true,
+            "fields": {
+                "description": "Pay in our office"
+            }
+        },
+        "wire_transfer": {
+            "enabled": true,
+            "fields": {
+                "account_number": "",
+                "holder_name": "",
+                "bank_name": "",
+                "swift": "",
+                "description": "Pay via Wire Transfer"
+            }
+        },
+        "paypal": {
+            "enabled": true,
+            "fields": {
+                "paypal_email": "",
+                "currency_code": "USD",
+                "paypal_mode": "sandbox",
+                "description": ""
+            }
+        },
+        "stripe": {
+            "enabled": true,
+            "fields": {
+                "stripe_public_api_key": "",
+                "secret_key": "",
+                "description": "Stripe"
+            }
+        }
+    },
+    "recaptcha_site_key": "",
+    "recaptcha_private_key": "",
+    "instructors_page": "1151",
+    "course_premoderation": "",
+    "certificate_image": 1210,
+    "certificate_title": "CERTIFICATE",
+    "certificate_title_color": "",
+    "certificate_text": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart",
+    "certificate_stamp": ""
+}

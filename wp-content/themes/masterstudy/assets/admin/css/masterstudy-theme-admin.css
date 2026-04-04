@@ -1,0 +1,77 @@
+#toplevel_page_stm-admin .wp-submenu li:last-child a {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.stm-update-pro-plus {
+  display: block;
+  background-color: #227AFF;
+  border-radius: 24px;
+  color: #ffffff;
+}
+.stm-update-pro-plus__trial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  padding: 10px 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: -webkit-linear-gradient(193deg, #2C3942 14.08%, #294871 96.16%);
+  background: -o-linear-gradient(193deg, #2C3942 14.08%, #294871 96.16%);
+  background: linear-gradient(257deg, #2C3942 14.08%, #294871 96.16%);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+.stm-update-pro-plus__trial strong {
+  display: block;
+  font-weight: 700;
+}
+.stm-update-pro-plus__date {
+  display: block;
+  padding: 3px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.wp-menu-license-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.wp-menu-license-status.license-expired strong, .wp-menu-license-status.license-warning strong, .wp-menu-license-status.license-activate strong {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #FF3945;
+  color: #ffffff !important;
+  border-radius: 2px;
+  padding: 3px;
+  font-weight: 700;
+  font-size: 10px;
+}
+.wp-menu-license-status.license-warning strong, .wp-menu-license-status.license-activate strong {
+  margin-right: -5px;
+  letter-spacing: -0.5px;
+  background-color: #FFA800;
+  font-weight: 600;
+  color: #001931;
+}

@@ -1,0 +1,71 @@
+{
+    "main_color": "",
+    "secondary_color": "",
+    "currency_symbol": "$",
+    "currency_position": "left",
+    "currency_thousands": ",",
+    "wocommerce_checkout": true,
+    "courses_page": "2",
+    "courses_view": "grid",
+    "courses_per_page": "12",
+    "courses_per_row": "3",
+    "course_card_view": "right",
+    "course_card_style": "style_2",
+    "courses_categories_slug": "course",
+    "load_more_type": "button",
+    "course_style": "default",
+    "redirect_after_purchase": "",
+    "user_url": "",
+    "user_url_profile": "",
+    "certificate_url": "",
+    "login_url": "",
+    "chat_url": "",
+    "wishlist_url": "",
+    "checkout_url": "",
+    "payment_methods": {
+        "cash": {
+            "enabled": true,
+            "fields": {
+                "description": "Pay in our office"
+            }
+        },
+        "wire_transfer": {
+            "enabled": true,
+            "fields": {
+                "account_number": "",
+                "holder_name": "",
+                "bank_name": "",
+                "swift": "900325984",
+                "description": "Pay via Wire Transfer"
+            }
+        },
+        "paypal": {
+            "enabled": true,
+            "fields": {
+                "paypal_email": "",
+                "currency_code": "USD",
+                "paypal_mode": "sandbox",
+                "description": ""
+            }
+        },
+        "stripe": {
+            "enabled": true,
+            "fields": {
+                "stripe_public_api_key": "",
+                "secret_key": "",
+                "description": "Stripe something"
+            }
+        }
+    },
+    "recaptcha_site_key": "",
+    "recaptcha_private_key": "",
+    "instructors_page": "796",
+    "profile_style": "default",
+    "course_premoderation": "",
+    "certificate_image": 1250,
+    "certificate_title": "CERTIFICATE",
+    "certificate_title_color": "rgba(27,27,27,1)",
+    "certificate_text": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart",
+    "certificate_stamp": "",
+    "addons": "{\"udemy\":\"on\"}"
+}

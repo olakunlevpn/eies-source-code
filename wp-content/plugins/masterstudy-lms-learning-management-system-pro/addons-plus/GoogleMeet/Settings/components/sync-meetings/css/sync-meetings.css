@@ -1,0 +1,64 @@
+.sync-meetings-buttons .btn-outlined {
+	padding: 12px 20px;
+	height: 40px;
+	border: 1px solid #2985F7;
+	color: #2985F7;
+	border-radius: 4px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	background-color: transparent;
+	line-height: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-right: 10px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+.sync-meetings-buttons .btn-outlined:hover {
+	 background-color: #2985F7;
+	 color: white;
+ }
+.sync-meetings-buttons .btn-status {
+	padding: 12px 20px;
+	height: 40px;
+	background-color: rgba(78, 206, 94, 0.1);
+	border: 1px solid rgba(78, 206, 94, 0.1);
+	color: rgba(69, 189, 84, 1);
+	border-radius: 4px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-right: 10px;
+	transition-duration: 0.3s;
+	cursor: default;
+}
+.sync-meetings-buttons {
+	display: flex;
+	justify-content: right;
+}
+.nuxy_reset_sync_meetings .installing {
+	display: none;
+}
+.nuxy_reset_sync_meetings .downloaded {
+	display: none;
+}
+.nuxy_reset_sync_meetings.installing .installing {
+	display: inline-block;
+}
+.nuxy_reset_sync_meetings.installed .downloaded  {
+	display: inline-block;
+}
+#sync-error-message {
+	display: none;
+	padding-top: 10px;
+	color: red;
+	width: 200%;
+}
+#sync-error-message p {
+	margin: 0;
+}

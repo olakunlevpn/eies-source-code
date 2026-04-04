@@ -1,0 +1,73 @@
+.stm_gdpr_popup-main {
+    position: fixed;
+    padding: 26px 30px 30px;
+    width: 380px;
+    border-radius: 5px;
+    z-index: 9999999;
+    .stm_gdpr_popup-links {
+        margin-top: 15px;
+        font-size: 14px;
+        &:after {
+            content: "";
+            display: table;
+            width: 100%;
+            clear: both;
+        }
+        a {
+            float: right;
+            width: 153px;
+            padding: 4px 0;
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #ffffff;
+            transition: all .3s;
+            &.stm_gdpr_popup-accept {
+                float: left;
+                background-color: #5e5cc7;
+                border: 1px solid #5e5cc7;
+                margin-left: -5px;
+            }
+            &:hover {
+                border-color: #ffffff;
+                background-color: #ffffff;
+                color: #5e5cc7;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        width: auto;
+        right: 20px !important;
+        left: 20px !important;
+        .stm_gdpr_popup-links {
+        a {
+            float: none !important;
+            display: block;
+            width: auto;
+            margin: 20px 0 5px;
+        }
+        }
+    }
+}
+#stm-gpdr-form {
+    .stm-gdpr-errors {
+        color: #ce0000;
+    }
+    .stm-gdpr-success {
+        color: #056d05;
+    }
+}
+.place-order #stmgdpr_field {
+    label.checkbox {
+        padding-left: 20px;
+    }
+    input#stmgdpr {
+        margin: 5px 0 0 -18px;
+    }
+}

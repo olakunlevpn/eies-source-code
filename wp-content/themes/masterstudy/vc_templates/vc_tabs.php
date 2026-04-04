@@ -1,0 +1,71 @@
+<?php
+/**
+ * Shortcode attributes
+ * @var $atts
+ */
+
+$output = '';
+
+extract( // phpcs:ignore WordPress.PHP.DontExtract.extract_extract
+	shortcode_atts(
+		array(
+			'title'    => '',
+			'interval' => 0,
+			'el_class' => '',
+		),
+		$atts
+	)
+);
+
+wp_enqueue_script( 'jquery-ui-tabs' );
+
+$el_class = $this->getExtraClass( $el_class );
+
+$element = 'wpb_tabs';
+if ( 'vc_tour' === $this->shortcode ) {
+	$element = 'wpb_tour';
+}
+
+// Extract tab titles
+preg_match_all( '/vc_tab([^\]]+)/i', $content, $matches, PREG_OFFSET_CAPTURE );
+$tab_titles = array();
+/**
+ * vc_tabs
+ *
+ */
+if ( isset( $matches[1] ) ) {
+	$tab_titles = $matches[1];
+}
+$tabs_nav   = '<ul class="wpb_tabs_nav ui-tabs-nav vc_clearfix">';
+$tabs_count = count( $tab_titles );
+
+$tab_width = round( 100 / $tabs_count, 5 );
+
+if ( 'wpb_tour' === $element ) {
+	$tab_width = '100';
+}
+
+foreach ( $tab_titles as $_tab ) {
+	$tab_atts = shortcode_parse_atts( $_tab[0] );
+	if ( isset( $tab_atts['title'] ) ) {
+		$tabs_nav .= '<li class="heading_font" style="width:' . esc_attr( $tab_width ) . '%"><a href="#tab-' . ( $tab_atts['tab_id'] ?? esc_attr( $tab_atts['title'] ) ) . '">' . $tab_atts['title'] . '</a></li>';
+	}
+}
+$tabs_nav .= '</ul>' . "\n";
+
+$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, trim( $element . ' wpb_content_element ' . $el_class ), $this->settings['base'], $atts );
+
+$output .= "\n\t" . '<div class="' . $css_class . '" data-interval="' . $interval . '">';
+$output .= "\n\t\t" . '<div class="wpb_wrapper wpb_tour_tabs_wrapper ui-tabs vc_clearfix">';
+$output .= wpb_widget_title(
+	array(
+		'title'      => $title,
+		'extraclass' => $element . '_heading',
+	)
+);
+$output .= "\n\t\t\t" . $tabs_nav;
+$output .= "\n\t\t\t" . wpb_js_remove_wpautop( $content );
+$output .= "\n\t\t" . '</div> ';
+$output .= "\n\t" . '</div> ';
+
+echo stm_echo_safe_output( $output ); // phpcs:ignore

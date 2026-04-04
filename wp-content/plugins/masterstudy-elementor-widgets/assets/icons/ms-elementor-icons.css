@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'ms-elementor';
+  src:  url('ms-elementor.eot?ptxqup');
+  src:  url('ms-elementor.eot?ptxqup#iefix') format('embedded-opentype'),
+    url('ms-elementor.ttf?ptxqup') format('truetype'),
+    url('ms-elementor.woff?ptxqup') format('woff'),
+    url('ms-elementor.svg?ptxqup#ms-elementor') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ms-elementor-"], [class*=" ms-elementor-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ms-elementor' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ms-elementor-buddypress_groups:before {
+  content: "\e900";
+}
+.ms-elementor-buddypress_instructors:before {
+  content: "\e901";
+}
+.ms-elementor-certificate:before {
+  content: "\e902";
+}
+.ms-elementor-charts:before {
+  content: "\e903";
+}
+.ms-elementor-color_separator:before {
+  content: "\e904";
+}
+.ms-elementor-contact_form_7:before {
+  content: "\e905";
+}
+.ms-elementor-contact:before {
+  content: "\e906";
+}
+.ms-elementor-countdown:before {
+  content: "\e907";
+}
+.ms-elementor-course_lesson:before {
+  content: "\e908";
+}
+.ms-elementor-course_lessons:before {
+  content: "\e909";
+}
+.ms-elementor-course_search:before {
+  content: "\e90a";
+}
+.ms-elementor-cta:before {
+  content: "\e90b";
+}
+.ms-elementor-custom_heading:before {
+  content: "\e90c";
+}
+.ms-elementor-empty_space:before {
+  content: "\e90d";
+}
+.ms-elementor-event_info:before {
+  content: "\e90e";
+}
+.ms-elementor-events_grid:before {
+  content: "\e90f";
+}
+.ms-elementor-experts:before {
+  content: "\e910";
+}
+.ms-elementor-featured_products:before {
+  content: "\e911";
+}
+.ms-elementor-flying_students:before {
+  content: "\e912";
+}
+.ms-elementor-gallery_grid:before {
+  content: "\e913";
+}
+.ms-elementor-icon_box:before {
+  content: "\e914";
+}
+.ms-elementor-icon_button:before {
+  content: "\e915";
+}
+.ms-elementor-image_box:before {
+  content: "\e916";
+}
+.ms-elementor-login:before {
+  content: "\e917";
+}
+.ms-elementor-mailchimp:before {
+  content: "\e918";
+}
+.ms-elementor-multy_separator:before {
+  content: "\e919";
+}
+.ms-elementor-pie_chart:before {
+  content: "\e91a";
+}
+.ms-elementor-popup_lnks:before {
+  content: "\e91b";
+}
+.ms-elementor-post_author:before {
+  content: "\e91c";
+}
+.ms-elementor-post_comments:before {
+  content: "\e91d";
+}
+.ms-elementor-post_info:before {
+  content: "\e91e";
+}
+.ms-elementor-post_list:before {
+  content: "\e91f";
+}
+.ms-elementor-post_tags:before {
+  content: "\e920";
+}
+.ms-elementor-pricing_plan:before {
+  content: "\e921";
+}
+.ms-elementor-product_categories:before {
+  content: "\e922";
+}
+.ms-elementor-share:before {
+  content: "\e923";
+}
+.ms-elementor-sidebar:before {
+  content: "\e924";
+}
+.ms-elementor-sign_up_now:before {
+  content: "\e925";
+}
+.ms-elementor-sign_up:before {
+  content: "\e926";
+}
+.ms-elementor-stats_counter:before {
+  content: "\e927";
+}
+.ms-elementor-teacher_detail:before {
+  content: "\e928";
+}
+.ms-elementor-teachers_grid:before {
+  content: "\e929";
+}
+.ms-elementor-testimonials:before {
+  content: "\e92a";
+}
+.ms-elementor-video:before {
+  content: "\e92b";
+}
+.ms-elementor-wishlist:before {
+  content: "\e92c";
+}
+.ms-elementor-wpml:before {
+  content: "\e92d";
+}

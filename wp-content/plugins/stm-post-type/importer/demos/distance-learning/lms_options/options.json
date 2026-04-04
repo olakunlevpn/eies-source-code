@@ -1,0 +1,103 @@
+{
+    "main_color": "#2dd675",
+    "secondary_color": "#8464ea",
+    "currency_symbol": "",
+    "currency_position": "left",
+    "currency_thousands": ",",
+    "wocommerce_checkout": "",
+    "author_fee": "10",
+    "courses_featured_num": 1,
+    "courses_page": 2,
+    "courses_view": "grid",
+    "courses_per_page": "9",
+    "courses_per_row": "3",
+    "course_card_view": "center",
+    "course_card_style": "style_1",
+    "courses_categories_slug": "stm_lms_course_category",
+    "courses_image_size": "",
+    "load_more_type": "button",
+    "enable_courses_filter": "1",
+    "enable_courses_filter_category": "1",
+    "enable_courses_filter_subcategory": "1",
+    "enable_courses_filter_levels": "1",
+    "enable_courses_filter_rating": "1",
+    "enable_courses_filter_status": "1",
+    "enable_courses_filter_instructor": "1",
+    "enable_courses_filter_price": "1",
+    "disable_lazyload": "",
+    "course_style": "classic",
+    "redirect_after_purchase": "",
+    "course_allow_new_categories": "",
+    "enable_sticky": "",
+    "enable_sticky_title": "",
+    "enable_sticky_rating": "",
+    "enable_sticky_teacher": "",
+    "enable_sticky_category": "",
+    "enable_sticky_price": "",
+    "enable_sticky_button": "",
+    "user_url": "",
+    "user_url_profile": "",
+    "certificate_url": "",
+    "login_url": "",
+    "chat_url": "",
+    "wishlist_url": "",
+    "checkout_url": "",
+    "payment_methods": {
+        "cash": {
+            "enabled": true,
+            "fields": {
+                "description": "Pay in our office"
+            }
+        },
+        "wire_transfer": {
+            "enabled": true,
+            "fields": {
+                "account_number": "",
+                "holder_name": "",
+                "bank_name": "",
+                "swift": "",
+                "description": "Pay via Wire Transfer"
+            }
+        },
+        "paypal": {
+            "enabled": true,
+            "fields": {
+                "paypal_email": "",
+                "currency_code": "",
+                "paypal_mode": "sandbox",
+                "description": ""
+            }
+        },
+        "stripe": {
+            "enabled": true,
+            "fields": {
+                "stripe_public_api_key": "",
+                "secret_key": "",
+                "description": "Stripe payment",
+                "currency": ""
+            }
+        }
+    },
+    "recaptcha_site_key": "",
+    "recaptcha_private_key": "",
+    "user_premoderation": "",
+    "instructors_page": "",
+    "profile_style": "classic",
+    "cancel_subscription": "",
+    "course_premoderation": "",
+    "certificate_threshold": 70,
+    "certificate_image": 4562,
+    "certificate_title": "CERTIFICATE",
+    "certificate_title_color": "",
+    "certificate_title_fsz": 60,
+    "certificate_subtitle": "",
+    "certificate_subtitle_color": "",
+    "certificate_subtitle_fsz": 40,
+    "certificate_text": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart",
+    "certificate_text_color": "",
+    "certificate_text_fsz": 17,
+    "addons": "",
+    "payout": "",
+    "gdpr_warning": "I agree with storage and handling of my data by this website.",
+    "gdpr_page": ""
+}

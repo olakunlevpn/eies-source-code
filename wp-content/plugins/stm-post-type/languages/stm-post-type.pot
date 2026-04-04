@@ -1,0 +1,1571 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: STM Configurations\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-17 05:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: post_type/post_type.class.php:28
+msgid "Add New"
+msgstr ""
+
+#: post_type/post_type.class.php:35
+msgid " found"
+msgstr ""
+
+#: post_type/post_type.class.php:36
+msgid "  found in Trash"
+msgstr ""
+
+#: post_type/post_type.class.php:70
+msgid "Options"
+msgstr ""
+
+#: post_type/post_type.class.php:183
+msgid "Add"
+msgstr ""
+
+#: post_type/post_type.class.php:365
+msgid "Choose Image"
+msgstr ""
+
+#: post_type/post_type.class.php:366
+msgid "Remove Image"
+msgstr ""
+
+#: post_type/post_type.class.php:373
+msgid "Select image"
+msgstr ""
+
+#: post_type/post_type.class.php:375
+msgid "Attach"
+msgstr ""
+
+#: post_type/post_type.php:9 post_type/post_type.php:37
+msgid "Testimonial"
+msgstr ""
+
+#: post_type/post_type.php:10
+msgid "Testimonials"
+msgstr ""
+
+#: post_type/post_type.php:14 redux-framework/options-init.php:1024
+msgid "Sidebar"
+msgstr ""
+
+#: post_type/post_type.php:15 redux-framework/options-init.php:885
+msgid "Sidebars"
+msgstr ""
+
+#: post_type/post_type.php:19 post_type/post_type.php:20
+#: post_type/post_type.php:478 post_type/post_type.php:479
+#: redux-framework/options-init.php:923
+msgid "Teachers"
+msgstr ""
+
+#: post_type/post_type.php:24 post_type/post_type.php:483
+#: redux-framework/options-init.php:977
+msgid "Gallery"
+msgstr ""
+
+#: post_type/post_type.php:25 post_type/post_type.php:484
+msgid "Galleries"
+msgstr ""
+
+#: post_type/post_type.php:29 post_type/post_type.php:30
+#: post_type/post_type.php:488 post_type/post_type.php:489
+#: redux-framework/options-init.php:950 redux-framework/options-init.php:1041
+msgid "Events"
+msgstr ""
+
+#: post_type/post_type.php:75
+msgid "Categories"
+msgstr ""
+
+#: post_type/post_type.php:87
+msgid "Participant"
+msgstr ""
+
+#: post_type/post_type.php:113
+msgid "Course Teacher"
+msgstr ""
+
+#: post_type/post_type.php:117
+msgid "Teacher"
+msgstr ""
+
+#: post_type/post_type.php:127
+msgid "Course Details"
+msgstr ""
+
+#: post_type/post_type.php:131
+msgid "Status"
+msgstr ""
+
+#: post_type/post_type.php:134
+msgid "No Status"
+msgstr ""
+
+#: post_type/post_type.php:135
+msgid "Hot"
+msgstr ""
+
+#: post_type/post_type.php:136
+msgid "Special"
+msgstr ""
+
+#: post_type/post_type.php:137
+msgid "New"
+msgstr ""
+
+#: post_type/post_type.php:141
+msgid "Duration"
+msgstr ""
+
+#: post_type/post_type.php:145
+msgid "Lectures"
+msgstr ""
+
+#: post_type/post_type.php:149
+msgid "Video"
+msgstr ""
+
+#: post_type/post_type.php:153
+msgid "Certificate"
+msgstr ""
+
+#: post_type/post_type.php:160
+msgid "Course Link"
+msgstr ""
+
+#: post_type/post_type.php:164
+msgid "URL"
+msgstr ""
+
+#: post_type/post_type.php:180
+msgid "Page Options"
+msgstr ""
+
+#: post_type/post_type.php:183
+msgid "Transparent Header"
+msgstr ""
+
+#: post_type/post_type.php:211
+msgid "Title Box"
+msgstr ""
+
+#: post_type/post_type.php:215 widgets/woo_popular_courses.php:32
+msgid "Title"
+msgstr ""
+
+#: post_type/post_type.php:218 post_type/post_type.php:276
+msgid "Show"
+msgstr ""
+
+#: post_type/post_type.php:219 post_type/post_type.php:277
+msgid "Hide"
+msgstr ""
+
+#: post_type/post_type.php:223
+msgid "Sub Title"
+msgstr ""
+
+#: post_type/post_type.php:227
+msgid "Background Color"
+msgstr ""
+
+#: post_type/post_type.php:231
+msgid "Font Color"
+msgstr ""
+
+#: post_type/post_type.php:235
+msgid "Line Color"
+msgstr ""
+
+#: post_type/post_type.php:239
+msgid "Sub Title Font Color"
+msgstr ""
+
+#: post_type/post_type.php:243
+msgid "Custom Background Image"
+msgstr ""
+
+#: post_type/post_type.php:247
+msgid "Background Position"
+msgstr ""
+
+#: post_type/post_type.php:251
+msgid "Background Repeat"
+msgstr ""
+
+#: post_type/post_type.php:254
+msgid "Repeat"
+msgstr ""
+
+#: post_type/post_type.php:255
+msgid "No Repeat"
+msgstr ""
+
+#: post_type/post_type.php:256
+msgid "Repeat-X"
+msgstr ""
+
+#: post_type/post_type.php:257
+msgid "Repeat-Y"
+msgstr ""
+
+#: post_type/post_type.php:261
+msgid "Overlay"
+msgstr ""
+
+#: post_type/post_type.php:265
+msgid "Small"
+msgstr ""
+
+#: post_type/post_type.php:269 post_type/post_type.php:273
+msgid "Breadcrumbs"
+msgstr ""
+
+#: post_type/post_type.php:281
+msgid "Breadcrumbs Color"
+msgstr ""
+
+#: post_type/post_type.php:341
+msgid "Testimonial Info"
+msgstr ""
+
+#: post_type/post_type.php:344
+msgid "Name"
+msgstr ""
+
+#: post_type/post_type.php:348
+msgid "Profession"
+msgstr ""
+
+#: post_type/post_type.php:354
+msgid "Expert Info"
+msgstr ""
+
+#: post_type/post_type.php:357
+msgid "Teacher Sphere"
+msgstr ""
+
+#: post_type/post_type.php:361
+msgid "Teacher Certified By"
+msgstr ""
+
+#: post_type/post_type.php:367
+msgid "Expert Socials"
+msgstr ""
+
+#: post_type/post_type.php:370 redux-framework/options-init.php:1691
+msgid "Facebook"
+msgstr ""
+
+#: post_type/post_type.php:374 redux-framework/options-init.php:1699
+msgid "Twitter"
+msgstr ""
+
+#: post_type/post_type.php:378 redux-framework/options-init.php:1799
+msgid "Google +"
+msgstr ""
+
+#: post_type/post_type.php:382
+msgid "LinkedIn"
+msgstr ""
+
+#: post_type/post_type.php:386 redux-framework/options-init.php:1813
+msgid "Youtube"
+msgstr ""
+
+#: post_type/post_type.php:392
+msgid "Event Info"
+msgstr ""
+
+#: post_type/post_type.php:395
+msgid "Event Start"
+msgstr ""
+
+#: post_type/post_type.php:399
+msgid "Event End"
+msgstr ""
+
+#: post_type/post_type.php:403
+msgid "Event Location"
+msgstr ""
+
+#: post_type/post_type.php:407
+msgid "Event Price"
+msgstr ""
+
+#: post_type/post_type.php:413
+msgid "Participant Info"
+msgstr ""
+
+#: post_type/post_type.php:416
+msgid "Email"
+msgstr ""
+
+#: post_type/post_type.php:420
+msgid "Phone"
+msgstr ""
+
+#: post_type/post_type.php:424
+msgid "Event ID"
+msgstr ""
+
+#: post_type/post_type.php:500
+msgid "Custom Post Type Renaming Settings"
+msgstr ""
+
+#: post_type/post_type.php:508
+msgid "\" title (admin panel tab name)"
+msgstr ""
+
+#: post_type/post_type.php:516
+msgid "\" plural title"
+msgstr ""
+
+#: post_type/post_type.php:524
+msgid "\" rewrite (URL text)"
+msgstr ""
+
+#: post_type/post_type.php:534
+msgid ""
+"NOTE: After you change the rewrite field values, you'll need to refresh "
+"permalinks under Settings -> Permalinks"
+msgstr ""
+
+#: post_type/post_type.php:537
+msgid "Save settings"
+msgstr ""
+
+#: theme/woocommerce_setups.php:11 theme/woocommerce_setups.php:94
+#: theme/woocommerce_setups.php:101
+msgid "Category Background Color"
+msgstr ""
+
+#: theme/woocommerce_setups.php:13 theme/woocommerce_setups.php:97
+msgid "Enter a value for this field"
+msgstr ""
+
+#: theme/woocommerce_setups.php:14
+msgid "Category Background font"
+msgstr ""
+
+#: theme/woocommerce_setups.php:18 theme/woocommerce_setups.php:106
+msgid "Choose icons from Font Awesome Pack"
+msgstr ""
+
+#: theme/woocommerce_setups.php:34 theme/woocommerce_setups.php:126
+msgid "Choose from Master Study Icons Pack"
+msgstr ""
+
+#: theme/woocommerce_setups.php:50
+msgid "Click on button, then choose icon, which will be held for this category"
+msgstr ""
+
+#: theme/woocommerce_setups.php:51
+msgid "If none of this icons suits you, upload thumbnail (130*120)"
+msgstr ""
+
+#: theme/woocommerce_setups.php:142
+msgid "Remove icon"
+msgstr ""
+
+#: theme/woocommerce_setups.php:208
+msgid "No available seats"
+msgstr ""
+
+#: theme/woocommerce_setups.php:216
+msgid "Enroll this Course"
+msgstr ""
+
+#: theme/mailchimp.php:9
+msgid "Enter a valid email"
+msgstr ""
+
+#: theme/payment.php:90
+msgid "New participant for [event]"
+msgstr ""
+
+#: theme/payment.php:91
+msgid ""
+"A new member wants to join your [event]\n"
+"\t\t\t\tParticipant Info:\n"
+"\t\t        Name: [name]\n"
+"\t\t\t\tEmail: [email]\n"
+"\t\t\t\tPhone: [phone]\n"
+"\t\t\t\tMessage: [message]"
+msgstr ""
+
+#: theme/payment.php:97 redux-framework/options-init.php:1085
+msgid "Confirmation of your pariticipation in the [event]"
+msgstr ""
+
+#: theme/payment.php:103
+#, php-format
+msgid ""
+"Dear [name]. \n"
+"\t\t\t\t\t\tThis email is sent to you to confirm your participation in the "
+"event. \n"
+"\t\t\t\t\t\tWe will contact you soon with further details. \n"
+"\t\t\t\t\t\tWith any question, feel free to phone +999999999999 or write to "
+"<a href=\"mailto:%s\">%s</a>.\n"
+"\t\t\t\t\t\tRegards, MasterStudy Team"
+msgstr ""
+
+#: redux-framework/options-init.php:29 redux-framework/options-init.php:30
+msgid "Theme Options"
+msgstr ""
+
+#: redux-framework/options-init.php:85
+msgid "General"
+msgstr ""
+
+#: redux-framework/options-init.php:93
+msgid "Site Logo"
+msgstr ""
+
+#: redux-framework/options-init.php:95
+msgid "Upload your logo file here."
+msgstr ""
+
+#: redux-framework/options-init.php:101
+msgid "White-text Logo"
+msgstr ""
+
+#: redux-framework/options-init.php:103
+msgid ""
+"For our transparent header options, we need your logo to be in white to "
+"stand out."
+msgstr ""
+
+#: redux-framework/options-init.php:108
+msgid "Logo Typography"
+msgstr ""
+
+#: redux-framework/options-init.php:124
+msgid ""
+"Select custom font for your logo (choose these parametrs if you want to "
+"display Blogname instead of logo image)."
+msgstr ""
+
+#: redux-framework/options-init.php:134
+msgid "Logo Width (px)"
+msgstr ""
+
+#: redux-framework/options-init.php:140
+msgid "Menu margin top (px)"
+msgstr ""
+
+#: redux-framework/options-init.php:147
+msgid "Main Content Paddings"
+msgstr ""
+
+#: redux-framework/options-init.php:153
+msgid "Enable preloader."
+msgstr ""
+
+#: redux-framework/options-init.php:160
+msgid "Site Favicon"
+msgstr ""
+
+#: redux-framework/options-init.php:162
+msgid "Upload a 16px x 16px .png or .gif image here"
+msgstr ""
+
+#: redux-framework/options-init.php:168
+msgid "Header"
+msgstr ""
+
+#: redux-framework/options-init.php:176
+msgid "Header Style Options"
+msgstr ""
+
+#: redux-framework/options-init.php:177
+msgid "Select your header style option"
+msgstr ""
+
+#: redux-framework/options-init.php:179
+msgid "Offline Courses"
+msgstr ""
+
+#: redux-framework/options-init.php:180
+msgid "Online Courses"
+msgstr ""
+
+#: redux-framework/options-init.php:181
+msgid "Academy"
+msgstr ""
+
+#: redux-framework/options-init.php:182
+msgid "Logo Centered"
+msgstr ""
+
+#: redux-framework/options-init.php:189
+msgid "Enable fixed header on scroll."
+msgstr ""
+
+#: redux-framework/options-init.php:195
+msgid "Header Desktop Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:201
+msgid "Header Mobile Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:207
+msgid "Header Color"
+msgstr ""
+
+#: redux-framework/options-init.php:229
+msgid "Header Links Color on Hover"
+msgstr ""
+
+#: redux-framework/options-init.php:253
+msgid "Show LMS Wishlist"
+msgstr ""
+
+#: redux-framework/options-init.php:260
+msgid "Show Search Icon"
+msgstr ""
+
+#: redux-framework/options-init.php:267 redux-framework/options-init.php:283
+#: redux-framework/options-init.php:330
+msgid "Show Socials"
+msgstr ""
+
+#: redux-framework/options-init.php:276
+msgid "Show WPML Switcher"
+msgstr ""
+
+#: redux-framework/options-init.php:290
+msgid "Show Search"
+msgstr ""
+
+#: redux-framework/options-init.php:297
+msgid "Show Popup links"
+msgstr ""
+
+#: redux-framework/options-init.php:310 redux-framework/options-init.php:322
+msgid "Course Categories"
+msgstr ""
+
+#: redux-framework/options-init.php:337 redux-framework/options-init.php:514
+msgid "Phone number"
+msgstr ""
+
+#: redux-framework/options-init.php:344 redux-framework/options-init.php:383
+msgid "Top Bar"
+msgstr ""
+
+#: redux-framework/options-init.php:350
+msgid "Enable Top Bar"
+msgstr ""
+
+#: redux-framework/options-init.php:358
+msgid "Show login url"
+msgstr ""
+
+#: redux-framework/options-init.php:365
+msgid "Enable Top Bar Social Media icons"
+msgstr ""
+
+#: redux-framework/options-init.php:371
+msgid "Enable Top Bar WPML switcher(if WPML Plugin installed)"
+msgstr ""
+
+#: redux-framework/options-init.php:377
+msgid "Top Bar Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:399
+msgid "Select custom font for your top bar text."
+msgstr ""
+
+#: redux-framework/options-init.php:409
+msgid "Top Bar Links Color on Hover"
+msgstr ""
+
+#: redux-framework/options-init.php:432
+msgid "Select Social Media Icons to display"
+msgstr ""
+
+#: redux-framework/options-init.php:433 redux-framework/options-init.php:1622
+#: redux-framework/options-init.php:1859
+msgid ""
+"The urls for your social media icons will be taken from Social Media "
+"settings tab."
+msgstr ""
+
+#: redux-framework/options-init.php:489
+msgid "Address"
+msgstr ""
+
+#: redux-framework/options-init.php:491
+msgid "1010 Moon ave, New York, NY US"
+msgstr ""
+
+#: redux-framework/options-init.php:496
+msgid "Show address on mobile"
+msgstr ""
+
+#: redux-framework/options-init.php:502 widgets/working_hours.php:11
+#: widgets/working_hours.php:25
+msgid "Working Hours"
+msgstr ""
+
+#: redux-framework/options-init.php:503
+msgid "Mon - Sat 8.00 - 18.00"
+msgstr ""
+
+#: redux-framework/options-init.php:508
+msgid "Show Working hours on mobile"
+msgstr ""
+
+#: redux-framework/options-init.php:515
+msgid "+1 212-226-3126"
+msgstr ""
+
+#: redux-framework/options-init.php:520
+msgid "Show Phone on mobile"
+msgstr ""
+
+#: redux-framework/options-init.php:527
+msgid "Styling"
+msgstr ""
+
+#: redux-framework/options-init.php:535
+msgid "Color Skin"
+msgstr ""
+
+#: redux-framework/options-init.php:537
+msgid "Default"
+msgstr ""
+
+#: redux-framework/options-init.php:538
+msgid "Custom color"
+msgstr ""
+
+#: redux-framework/options-init.php:546
+msgid "Primary Color"
+msgstr ""
+
+#: redux-framework/options-init.php:722
+msgid "Secondary Color"
+msgstr ""
+
+#: redux-framework/options-init.php:860
+msgid "Link Color"
+msgstr ""
+
+#: redux-framework/options-init.php:871
+msgid "Button Border Radius (px)"
+msgstr ""
+
+#: redux-framework/options-init.php:878
+msgid "Button Paddings"
+msgstr ""
+
+#: redux-framework/options-init.php:894 redux-framework/options-init.php:1013
+msgid "Grid view"
+msgstr ""
+
+#: redux-framework/options-init.php:895 redux-framework/options-init.php:1014
+msgid "List view"
+msgstr ""
+
+#: redux-framework/options-init.php:898
+msgid "Blog Layout"
+msgstr ""
+
+#: redux-framework/options-init.php:905
+msgid "Blog Sidebar"
+msgstr ""
+
+#: redux-framework/options-init.php:911
+msgid "Blog Sidebar - Position"
+msgstr ""
+
+#: redux-framework/options-init.php:913 redux-framework/options-init.php:940
+#: redux-framework/options-init.php:967 redux-framework/options-init.php:994
+#: redux-framework/options-init.php:1032
+msgid "Left"
+msgstr ""
+
+#: redux-framework/options-init.php:914 redux-framework/options-init.php:941
+#: redux-framework/options-init.php:968 redux-framework/options-init.php:995
+msgid "No Sidebar"
+msgstr ""
+
+#: redux-framework/options-init.php:915 redux-framework/options-init.php:942
+#: redux-framework/options-init.php:969 redux-framework/options-init.php:996
+#: redux-framework/options-init.php:1033
+msgid "Right"
+msgstr ""
+
+#: redux-framework/options-init.php:933
+msgid "Teachers Sidebar"
+msgstr ""
+
+#: redux-framework/options-init.php:938
+msgid "Teachers Sidebar - Position"
+msgstr ""
+
+#: redux-framework/options-init.php:960
+msgid "Events Sidebar"
+msgstr ""
+
+#: redux-framework/options-init.php:965
+msgid "Events Sidebar - Position"
+msgstr ""
+
+#: redux-framework/options-init.php:987
+msgid "Gallery Sidebar"
+msgstr ""
+
+#: redux-framework/options-init.php:992
+msgid "Gallery Sidebar - Position"
+msgstr ""
+
+#: redux-framework/options-init.php:1004
+msgid "Shop"
+msgstr ""
+
+#: redux-framework/options-init.php:1017
+msgid "Shop Layout"
+msgstr ""
+
+#: redux-framework/options-init.php:1030
+msgid "Sidebar - Position"
+msgstr ""
+
+#: redux-framework/options-init.php:1049
+msgid "Paypal Email"
+msgstr ""
+
+#: redux-framework/options-init.php:1054
+msgid "Currency"
+msgstr ""
+
+#: redux-framework/options-init.php:1055
+msgid "USD"
+msgstr ""
+
+#: redux-framework/options-init.php:1056
+msgid "Ex. USD"
+msgstr ""
+
+#: redux-framework/options-init.php:1061
+msgid "Paypal Mode"
+msgstr ""
+
+#: redux-framework/options-init.php:1071
+msgid "Admin Subject"
+msgstr ""
+
+#: redux-framework/options-init.php:1072
+msgid "New Participant for [event]"
+msgstr ""
+
+#: redux-framework/options-init.php:1077
+msgid "Admin Message"
+msgstr ""
+
+#: redux-framework/options-init.php:1078
+msgid ""
+"A new member wants to join your [event]<br>Participant Info:<br>Name: [name]"
+"<br>Email: [email]<br>Phone: [phone]<br>Message: [message]"
+msgstr ""
+
+#: redux-framework/options-init.php:1079 redux-framework/options-init.php:1092
+msgid "Shortcodes Available - [name], [email], [phone], [message]."
+msgstr ""
+
+#: redux-framework/options-init.php:1084
+msgid "User Subject"
+msgstr ""
+
+#: redux-framework/options-init.php:1090
+msgid "User Message"
+msgstr ""
+
+#: redux-framework/options-init.php:1091
+msgid ""
+"Dear [name].<br/> This email is sent to you to confirm your participation in "
+"the event.<br/>We will contact you soon with further details.<br>With any "
+"question, feel free to phone +999999999999 or write to <a href=\"mailto:"
+"timur@stylemix.net\">timur@stylemix.net</a>.<br>Regards,<br>MasterStudy Team."
+msgstr ""
+
+#: redux-framework/options-init.php:1098
+msgid "Typography"
+msgstr ""
+
+#: redux-framework/options-init.php:1105
+msgid "Body"
+msgstr ""
+
+#: redux-framework/options-init.php:1127
+msgid "Select custom font for your main body text."
+msgstr ""
+
+#: redux-framework/options-init.php:1137
+msgid "Button"
+msgstr ""
+
+#: redux-framework/options-init.php:1153
+msgid "Select custom font for your button."
+msgstr ""
+
+#: redux-framework/options-init.php:1162 widgets/menus.php:15
+msgid "Menu"
+msgstr ""
+
+#: redux-framework/options-init.php:1178
+msgid "Select custom font for menu"
+msgstr ""
+
+#: redux-framework/options-init.php:1188
+msgid "Heading"
+msgstr ""
+
+#: redux-framework/options-init.php:1204
+msgid "Select custom font for headings"
+msgstr ""
+
+#: redux-framework/options-init.php:1213
+msgid "H1"
+msgstr ""
+
+#: redux-framework/options-init.php:1241
+msgid "H1 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1247
+msgid "H2"
+msgstr ""
+
+#: redux-framework/options-init.php:1275
+msgid "H2 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1281
+msgid "H3"
+msgstr ""
+
+#: redux-framework/options-init.php:1309
+msgid "H3 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1315
+msgid "H4"
+msgstr ""
+
+#: redux-framework/options-init.php:1343
+msgid "H4 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1349
+msgid "H5"
+msgstr ""
+
+#: redux-framework/options-init.php:1377
+msgid "H5 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1383
+msgid "H6"
+msgstr ""
+
+#: redux-framework/options-init.php:1411
+msgid "H6 Margins"
+msgstr ""
+
+#: redux-framework/options-init.php:1418
+msgid "Footer"
+msgstr ""
+
+#: redux-framework/options-init.php:1426
+msgid "Enable footer widgets area."
+msgstr ""
+
+#: redux-framework/options-init.php:1432
+msgid "Footer Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1439
+msgid "Footer Columns"
+msgstr ""
+
+#: redux-framework/options-init.php:1440
+msgid "Select the number of columns to display in the footer."
+msgstr ""
+
+#: redux-framework/options-init.php:1445 redux-framework/options-init.php:1525
+#: redux-framework/options-init.php:1540
+msgid "1 Column"
+msgstr ""
+
+#: redux-framework/options-init.php:1446 redux-framework/options-init.php:1526
+msgid "2 Columns"
+msgstr ""
+
+#: redux-framework/options-init.php:1447 redux-framework/options-init.php:1527
+msgid "3 Columns"
+msgstr ""
+
+#: redux-framework/options-init.php:1448 redux-framework/options-init.php:1528
+msgid "4 Columns"
+msgstr ""
+
+#: redux-framework/options-init.php:1455
+msgid "Footer Bottom"
+msgstr ""
+
+#: redux-framework/options-init.php:1463
+msgid "Enable footer bottom widgets area."
+msgstr ""
+
+#: redux-framework/options-init.php:1469
+msgid "Footer Bottom Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1477
+msgid "Footer bottom Title typography"
+msgstr ""
+
+#: redux-framework/options-init.php:1499
+msgid "Footer bottom uppercase title."
+msgstr ""
+
+#: redux-framework/options-init.php:1505
+msgid "Footer Bottom Text Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1520
+msgid "Footer Bottom Columns"
+msgstr ""
+
+#: redux-framework/options-init.php:1521
+msgid "Select the number of columns to display in the footer bottom."
+msgstr ""
+
+#: redux-framework/options-init.php:1534
+msgid "Footer Bottom Socials"
+msgstr ""
+
+#: redux-framework/options-init.php:1535
+msgid "Select column number to insert socials."
+msgstr ""
+
+#: redux-framework/options-init.php:1539
+msgid "None"
+msgstr ""
+
+#: redux-framework/options-init.php:1541
+msgid "2 Column"
+msgstr ""
+
+#: redux-framework/options-init.php:1542
+msgid "3 Column"
+msgstr ""
+
+#: redux-framework/options-init.php:1543
+msgid "4 Column"
+msgstr ""
+
+#: redux-framework/options-init.php:1553
+msgid "Enable footer copyright section."
+msgstr ""
+
+#: redux-framework/options-init.php:1559
+msgid "Footer Copyright Background Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1569
+msgid "Footer Copyright Text Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1579
+msgid "Footer Copyright Border Color"
+msgstr ""
+
+#: redux-framework/options-init.php:1592
+msgid "Enable footer logo."
+msgstr ""
+
+#: redux-framework/options-init.php:1599
+msgid "Footer Logo"
+msgstr ""
+
+#: redux-framework/options-init.php:1605
+msgid ""
+"Upload your logo file here. Size - 50*56 (Retina 2x). Note, bigger images "
+"will be cropped to default size"
+msgstr ""
+
+#: redux-framework/options-init.php:1610
+msgid "Footer Copyright"
+msgstr ""
+
+#: redux-framework/options-init.php:1611
+msgid "Enter the copyright text."
+msgstr ""
+
+#: redux-framework/options-init.php:1615
+msgid ""
+"Copyright &copy; 2015 MasterStudy Theme by <a target=\"_blank\" href=\"http:"
+"//www.stylemixthemes.com/\">Stylemix Themes</a>"
+msgstr ""
+
+#: redux-framework/options-init.php:1621
+msgid "Select Social Media Icons to display in copyright section"
+msgstr ""
+
+#: redux-framework/options-init.php:1675
+msgid "Copyright"
+msgstr ""
+
+#: redux-framework/options-init.php:1676
+msgid "Copyright block at the bottom of footer"
+msgstr ""
+
+#: redux-framework/options-init.php:1683
+msgid "Social Media"
+msgstr ""
+
+#: redux-framework/options-init.php:1685
+msgid ""
+"Enter social media urls here and then you can enable them for footer or "
+"header. Please add full URLs including \"http://\"."
+msgstr ""
+
+#: redux-framework/options-init.php:1694
+msgid "Enter your Facebook URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1702
+msgid "Enter your Twitter URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1707
+msgid "Instagram"
+msgstr ""
+
+#: redux-framework/options-init.php:1710
+msgid "Enter your Instagram URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1715
+msgid "Behance"
+msgstr ""
+
+#: redux-framework/options-init.php:1717
+msgid "Enter your Behance URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1722
+msgid "Dribbble"
+msgstr ""
+
+#: redux-framework/options-init.php:1724
+msgid "Enter your Dribbble URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1729
+msgid "Flickr"
+msgstr ""
+
+#: redux-framework/options-init.php:1731
+msgid "Enter your Flickr URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1736
+msgid "Git"
+msgstr ""
+
+#: redux-framework/options-init.php:1738
+msgid "Enter your Git URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1743
+msgid "Linkedin"
+msgstr ""
+
+#: redux-framework/options-init.php:1745
+msgid "Enter your Linkedin URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1750
+msgid "Pinterest"
+msgstr ""
+
+#: redux-framework/options-init.php:1752
+msgid "Enter your Pinterest URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1757
+msgid "Yahoo"
+msgstr ""
+
+#: redux-framework/options-init.php:1759
+msgid "Enter your Yahoo URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1764
+msgid "Delicious"
+msgstr ""
+
+#: redux-framework/options-init.php:1766
+msgid "Enter your Delicious URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1771
+msgid "Dropbox"
+msgstr ""
+
+#: redux-framework/options-init.php:1773
+msgid "Enter your Dropbox URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1778
+msgid "Reddit"
+msgstr ""
+
+#: redux-framework/options-init.php:1780
+msgid "Enter your Reddit URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1785
+msgid "Soundcloud"
+msgstr ""
+
+#: redux-framework/options-init.php:1787
+msgid "Enter your Soundcloud URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1792
+msgid "Google"
+msgstr ""
+
+#: redux-framework/options-init.php:1794
+msgid "Enter your Google URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1801
+msgid "Enter your Google + URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1806
+msgid "Skype"
+msgstr ""
+
+#: redux-framework/options-init.php:1808
+msgid "Enter your Skype URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1815
+msgid "Enter your Youtube URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1820
+msgid "Youtube Play"
+msgstr ""
+
+#: redux-framework/options-init.php:1822
+msgid "Enter your Youtube Play(only icon differ) URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1827
+msgid "Tumblr"
+msgstr ""
+
+#: redux-framework/options-init.php:1829
+msgid "Enter your Tumblr URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1834
+msgid "Whatsapp"
+msgstr ""
+
+#: redux-framework/options-init.php:1836
+msgid "Enter your Whatsapp URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1841
+msgid "Telegram"
+msgstr ""
+
+#: redux-framework/options-init.php:1843
+msgid "Enter your Telegram URL."
+msgstr ""
+
+#: redux-framework/options-init.php:1849
+msgid "Social Widget"
+msgstr ""
+
+#: redux-framework/options-init.php:1850
+msgid "Choose socials for widget, and their order"
+msgstr ""
+
+#: redux-framework/options-init.php:1858
+msgid "Select Social Widget Icons to display"
+msgstr ""
+
+#. Base ID
+#: redux-framework/options-init.php:1889 widgets/mailchimp.php:11
+msgid "MailChimp"
+msgstr ""
+
+#: redux-framework/options-init.php:1896
+msgid "Mailchimp API key"
+msgstr ""
+
+#: redux-framework/options-init.php:1897
+msgid "Paste your MailChimp API key"
+msgstr ""
+
+#: redux-framework/options-init.php:1903
+msgid "Mailchimp list id"
+msgstr ""
+
+#: redux-framework/options-init.php:1904
+msgid "Paste your MailChimp List id"
+msgstr ""
+
+#: redux-framework/options-init.php:1911
+msgid "Google API"
+msgstr ""
+
+#: redux-framework/options-init.php:1918
+msgid "Recaptcha Public key"
+msgstr ""
+
+#: redux-framework/options-init.php:1924
+msgid "Recaptcha Private key"
+msgstr ""
+
+#: redux-framework/options-init.php:1931
+msgid "Custom CSS"
+msgstr ""
+
+#: redux-framework/options-init.php:1938
+msgid "CSS Code"
+msgstr ""
+
+#: redux-framework/options-init.php:1939
+msgid "Paste your custom CSS code here."
+msgstr ""
+
+#: widgets/mailchimp.php:12
+msgid "MailChimp widget"
+msgstr ""
+
+#: widgets/mailchimp.php:43
+msgid "Enter your E-mail"
+msgstr ""
+
+#: widgets/mailchimp.php:45
+msgid "Subscribe"
+msgstr ""
+
+#: widgets/mailchimp.php:46
+msgid "Please wait..."
+msgstr ""
+
+#: widgets/mailchimp.php:78
+msgid "Error API"
+msgstr ""
+
+#: widgets/mailchimp.php:99
+msgid "Newsletter"
+msgstr ""
+
+#: widgets/mailchimp.php:105 widgets/working_hours.php:116
+#: widgets/socials.php:76 widgets/menus.php:48 widgets/contacts.php:105
+#: widgets/recent_posts.php:84 widgets/text.php:69 widgets/pages.php:89
+msgid "Title:"
+msgstr ""
+
+#: widgets/mailchimp.php:109
+#, php-format
+msgid "To setup this widget please follow this <a href=\"%s\">link</a>"
+msgstr ""
+
+#: widgets/working_hours.php:12
+msgid "Office working hours"
+msgstr ""
+
+#: widgets/working_hours.php:34 widgets/working_hours.php:120
+msgid "Monday"
+msgstr ""
+
+#: widgets/working_hours.php:35 widgets/working_hours.php:124
+msgid "Tuesday"
+msgstr ""
+
+#: widgets/working_hours.php:36 widgets/working_hours.php:128
+msgid "Wednesday"
+msgstr ""
+
+#: widgets/working_hours.php:37 widgets/working_hours.php:132
+msgid "Thursday"
+msgstr ""
+
+#: widgets/working_hours.php:38 widgets/working_hours.php:136
+msgid "Friday"
+msgstr ""
+
+#: widgets/working_hours.php:39 widgets/working_hours.php:140
+msgid "Saturday"
+msgstr ""
+
+#: widgets/working_hours.php:40 widgets/working_hours.php:144
+msgid "Sunday"
+msgstr ""
+
+#: widgets/working_hours.php:53
+msgid "Closed"
+msgstr ""
+
+#: widgets/working_hours.php:83
+msgid "Working hours"
+msgstr ""
+
+#. Base ID
+#: widgets/socials.php:11
+msgid "Socials"
+msgstr ""
+
+#: widgets/socials.php:12
+msgid ""
+"Socials widget(customize order from theme options -> Social Media section -> "
+"Social Widget subsection )"
+msgstr ""
+
+#: widgets/socials.php:71
+msgid "Social Network"
+msgstr ""
+
+#: widgets/menus.php:8
+msgid "A list of your site&#8217;s Menus."
+msgstr ""
+
+#: widgets/menus.php:9
+msgid "STM Menus"
+msgstr ""
+
+#: widgets/menus.php:56
+msgid "Menu:"
+msgstr ""
+
+#. Base ID
+#: widgets/contacts.php:11 widgets/contacts.php:25
+msgid "Contacts"
+msgstr ""
+
+#: widgets/contacts.php:12
+msgid "Contacts widget"
+msgstr ""
+
+#: widgets/contacts.php:75
+msgid "Contact"
+msgstr ""
+
+#: widgets/contacts.php:98 widgets/recent_posts.php:88 widgets/pages.php:91
+msgid "Style:"
+msgstr ""
+
+#: widgets/contacts.php:100 widgets/recent_posts.php:90 widgets/pages.php:93
+msgid "Style 1"
+msgstr ""
+
+#: widgets/contacts.php:101 widgets/recent_posts.php:91 widgets/pages.php:94
+msgid "Style 2"
+msgstr ""
+
+#: widgets/contacts.php:109
+msgid "Address:"
+msgstr ""
+
+#: widgets/contacts.php:113
+msgid "Phone:"
+msgstr ""
+
+#: widgets/contacts.php:117
+msgid "Fax:"
+msgstr ""
+
+#: widgets/contacts.php:121
+msgid "E-mail:"
+msgstr ""
+
+#. Base ID
+#: widgets/recent_posts.php:11
+msgid "STM Recent posts"
+msgstr ""
+
+#: widgets/recent_posts.php:12
+msgid "Theme recent posts widget"
+msgstr ""
+
+#: widgets/recent_posts.php:25
+msgid "News"
+msgstr ""
+
+#: widgets/recent_posts.php:71
+msgid "Recent posts"
+msgstr ""
+
+#: widgets/recent_posts.php:77
+msgid "3"
+msgstr ""
+
+#: widgets/recent_posts.php:95
+msgid "Output number:"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:25
+msgid ""
+"Display a list of your top rated products on your site with course expert."
+msgstr ""
+
+#: widgets/woo_popular_courses.php:27
+msgid "STM WooCommerce Top Rated Products"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:31
+msgid "Popular courses"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:36
+msgid "style_1"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:41
+msgid "Style"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:49
+msgid "Number of products to show"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:113 widgets/woo_popular_courses.php:119
+msgid "By"
+msgstr ""
+
+#: widgets/woo_popular_courses.php:143
+msgid "Free"
+msgstr ""
+
+#: widgets/text.php:10
+msgid "STM Arbitrary text or HTML."
+msgstr ""
+
+#: widgets/text.php:13
+msgid "STM Text"
+msgstr ""
+
+#: widgets/text.php:75
+msgid "Content:"
+msgstr ""
+
+#: widgets/text.php:83
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: widgets/text.php:88
+msgid "Add Socials Widget"
+msgstr ""
+
+#: widgets/pages.php:6
+msgid "A list of your site&#8217;s Pages."
+msgstr ""
+
+#: widgets/pages.php:7
+msgid "STM Pages"
+msgstr ""
+
+#: widgets/pages.php:21
+msgid "Pages"
+msgstr ""
+
+#: widgets/pages.php:98
+msgid "Sort by:"
+msgstr ""
+
+#: widgets/pages.php:100
+msgid "Page title"
+msgstr ""
+
+#: widgets/pages.php:101
+msgid "Page order"
+msgstr ""
+
+#: widgets/pages.php:102
+msgid "Page ID"
+msgstr ""
+
+#: widgets/pages.php:106
+msgid "Include:"
+msgstr ""
+
+#: widgets/pages.php:108
+msgid "Page IDs, separated by commas."
+msgstr ""
+
+#: ajax/ajax.php:73
+msgid "Your application has been successfully sent"
+msgstr ""
+
+#: lib/mailchimp/Handling.class.php:37
+msgid ""
+"A notification has been sent to your email. Please confirm your subscription "
+"from there."
+msgstr ""
+
+#: lib/mailchimp/Handling.class.php:41
+msgid "User with this email is already subscribed"
+msgstr ""
+
+#: lib/mailchimp/Handling.class.php:45
+msgid ""
+"Please go to http://mailchimp.com/, login, go to your list, then Settings, "
+"and put \\\"First Name\\\" and \\\"Last Name\\\" not required."
+msgstr ""
+
+#: lib/mailchimp/Handling.class.php:49
+msgid "Your API Key is Invalid!"
+msgstr ""
+
+#: lib/mailchimp/Handling.class.php:53
+msgid "The list that you provided does not exists!"
+msgstr ""
+
+#. Name of the plugin
+msgid "STM Configurations"
+msgstr ""
+
+#. Description of the plugin
+msgid "Configurations plugin for the Masterstudy theme"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://stylemixthemes.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "StylemixThemes"
+msgstr ""

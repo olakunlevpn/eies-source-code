@@ -1,0 +1,146 @@
+{
+  "main_color": "",
+  "secondary_color": "",
+  "currency_symbol": "$",
+  "currency_position": "left",
+  "currency_thousands": ",",
+  "currency_decimals": ".",
+  "decimals_num": 2,
+  "wocommerce_checkout": true,
+  "guest_checkout": true,
+  "guest_checkout_notice": "",
+  "author_fee": "10",
+  "courses_featured_num": 1,
+  "deny_instructor_admin": "",
+  "demo_import": "",
+  "courses_page": "2",
+  "courses_view": "grid",
+  "courses_per_row": "3",
+  "courses_per_page": "12",
+  "load_more_type": "button",
+  "course_card_style": "style_1",
+  "course_card_view": "center",
+  "courses_image_size": "",
+  "disable_lazyload": "",
+  "courses_categories_slug": "course",
+  "disable_featured_courses": false,
+  "number_featured_in_archive": "3",
+  "enable_courses_filter": true,
+  "enable_courses_filter_notice": "",
+  "enable_courses_filter_category": true,
+  "enable_courses_filter_subcategory": true,
+  "enable_courses_filter_levels": true,
+  "enable_courses_filter_rating": true,
+  "enable_courses_filter_status": true,
+  "enable_courses_filter_instructor": true,
+  "enable_courses_filter_price": true,
+  "course_style": "default",
+  "course_tabs": "",
+  "course_tab_description": true,
+  "course_tab_curriculum": true,
+  "course_tab_faq": true,
+  "course_tab_announcement": true,
+  "course_tab_reviews": true,
+  "course_levels_config": [
+    {
+      "id": "beginner",
+      "label": "Beginner"
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate"
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced"
+    }
+  ],
+  "lesson_style": "default",
+  "redirect_after_purchase": "",
+  "course_allow_new_categories": "",
+  "allow_upload_video": true,
+  "enable_sticky": true,
+  "enable_sticky_title": true,
+  "enable_sticky_rating": true,
+  "enable_sticky_teacher": true,
+  "enable_sticky_category": true,
+  "enable_sticky_price": true,
+  "enable_sticky_button": true,
+  "enable_related_courses": true,
+  "related_option": "by_author",
+  "finish_popup_image_disable": "",
+  "finish_popup_image_failed": "",
+  "finish_popup_image_success": "",
+  "quiz_style": "default",
+  "user_url": 7392,
+  "user_url_profile": 7393,
+  "wishlist_url": 7394,
+  "checkout_url": 7395,
+  "payment_methods": {
+    "cash": {
+      "enabled": true,
+      "fields": {
+        "description": "Pay in our office"
+      }
+    },
+    "wire_transfer": {
+      "enabled": true,
+      "fields": {
+        "account_number": "",
+        "holder_name": "",
+        "bank_name": "",
+        "swift": "",
+        "description": "Pay via Wire Transfer"
+      }
+    },
+    "paypal": {
+      "enabled": true,
+      "fields": {
+        "paypal_email": "",
+        "currency_code": "USD",
+        "paypal_mode": "sandbox",
+        "description": ""
+      }
+    },
+    "stripe": {
+      "enabled": true,
+      "fields": {
+        "stripe_public_api_key": "",
+        "secret_key": "",
+        "description": "Stripe something",
+        "currency": "$"
+      }
+    }
+  },
+  "recaptcha_site_key": "",
+  "recaptcha_private_key": "",
+  "user_premoderation": "",
+  "register_as_instructor": "",
+  "disable_instructor_premoderation": "",
+  "instructor_can_add_students": true,
+  "course_premoderation": "",
+  "instructors_page": "",
+  "profile_style": "default",
+  "cancel_subscription": "",
+  "certificate_threshold": 70,
+  "certificate_banner": "",
+  "certificate_settings_title": "",
+  "certificate_image": 1234,
+  "certificate_title_notice": "",
+  "certificate_title": "CERTIFICATE",
+  "certificate_title_color": "",
+  "certificate_title_fsz": 60,
+  "certificate_subtitle_notice": "",
+  "certificate_subtitle": "{course}",
+  "certificate_subtitle_color": "",
+  "certificate_subtitle_fsz": "30",
+  "certificate_text_notice": "",
+  "certificate_text": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart",
+  "certificate_text_color": "",
+  "certificate_text_fsz": 17,
+  "addons": "",
+  "payout": "",
+  "gdpr_warning": "I agree with storage and handling of my data by this website.",
+  "gdpr_page": "",
+  "stm_lms_shortcodes": ""
+}

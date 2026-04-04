@@ -1,0 +1,32 @@
+{
+    "name": "masterstudy/lms-pro",
+    "description": "MasterStudy LMS PRO – Learning Management System WordPress Plugin for Online Courses",
+    "homepage": "https://masterstudy.stylemixthemes.com/lms-plugin/",
+    "license": "GPL-2.0-or-later",
+    "version": "3.9.2",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": "^7.4 || 8.0 - 8.1",
+        "ext-json": "*",
+        "ext-zip": "*",
+        "google/apiclient": "~2.11.0",
+        "guzzlehttp/guzzle": "~6.5 || 7.7.0",
+        "league/oauth2-facebook": "~2.0",
+        "psr/cache": "^1.0",
+        "stripe/stripe-php": "^17.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MasterStudy\\Lms\\Pro\\addons\\": "addons/",
+            "MasterStudy\\Lms\\Pro\\AddonsPlus\\": "addons-plus/",
+            "MasterStudy\\Lms\\Pro\\RestApi\\": "rest-api/",
+            "Zoom\\Api\\": "addons/zoom_conference/src/Api/Controllers/",
+            "Zoom\\Contracts\\": "addons/zoom_conference/src/Api/Contracts/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform-check": false
+    }
+}

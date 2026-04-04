@@ -1,0 +1,317 @@
+
+#emails_to_admin .stm-lms-email-section-collapsed {
+    cursor: pointer!important;
+}
+#emails_to_instructors .stm-lms-email-section-collapsed {
+    cursor: pointer!important;
+}
+#emails_to_students .stm-lms-email-section-collapsed {
+    cursor: pointer!important;
+}
+#system_notifications .stm-lms-email-section-collapsed {
+    cursor: pointer!important;
+}
+#system_notifications .wpcfto_group_started .stm-lms-email-section-collapsed .wpcfto_generic_field {
+ margin-bottom: 0 !important;
+}
+#emails_to_students .wpcfto_group_started .stm-lms-email-section-collapsed .wpcfto_generic_field {
+ margin-bottom: 0 !important;
+}
+#emails_to_instructors .wpcfto_group_started .stm-lms-email-section-collapsed .wpcfto_generic_field {
+ margin-bottom: 0 !important;
+}
+#emails_to_admin .wpcfto_group_started .stm-lms-email-section-collapsed .wpcfto_generic_field {
+ margin-bottom: 0 !important;
+}
+
+/* Shared scope for all email sections */
+#emails_to_admin,
+#emails_to_instructors,
+#emails_to_students,
+#system_notifications {}
+
+#emails_to_admin .selected-field .wpcfto-field-aside__label,
+#emails_to_instructors .selected-field .wpcfto-field-aside__label,
+#emails_to_students .selected-field .wpcfto-field-aside__label,
+#system_notifications .selected-field .wpcfto-field-aside__label{
+    position: static !important;
+}
+
+/* Labels */
+#emails_to_admin .wpcfto-field-aside__label,
+#emails_to_instructors .wpcfto-field-aside__label,
+#emails_to_students .wpcfto-field-aside__label,
+#system_notifications .wpcfto-field-aside__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 24px;
+    height: 35px;
+}
+
+/* Force visible blocks */
+#emails_to_admin .wpcfto-box-child.stm-lms-email-force-visible,
+#emails_to_instructors .wpcfto-box-child.stm-lms-email-force-visible,
+#emails_to_students .wpcfto-box-child.stm-lms-email-force-visible,
+#system_notifications .wpcfto-box-child.stm-lms-email-force-visible {
+    display: block !important;
+}
+
+/* Checkbox alignment */
+#emails_to_admin .wpcfto-field-content .wpcfto-admin-checkbox,
+#emails_to_instructors .wpcfto-field-content .wpcfto-admin-checkbox,
+#emails_to_students .wpcfto-field-content .wpcfto-admin-checkbox,
+#system_notifications .wpcfto-field-content .wpcfto-admin-checkbox {
+    align-items: end;
+    align-self: end;
+    padding-left: 82.5%;
+    margin-bottom: 6px;
+}
+
+/* Row min height */
+#emails_to_admin .stm_metaboxes_grid__inner .container-constructed .row .column-1,
+#emails_to_instructors .stm_metaboxes_grid__inner .container-constructed .row .column-1,
+#emails_to_students .stm_metaboxes_grid__inner .container-constructed .row .column-1,
+#system_notifications .stm_metaboxes_grid__inner .container-constructed .row .column-1 {
+    min-height: 24px;
+}
+
+/* Header toggle button */
+#emails_to_admin .stm-lms-email-header-toggle-arrow,
+#emails_to_instructors .stm-lms-email-header-toggle-arrow,
+#emails_to_students .stm-lms-email-header-toggle-arrow,
+#system_notifications .stm-lms-email-header-toggle-arrow {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: #f1f4f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+/* Default state: expanded (arrow pointing up) */
+#emails_to_admin .wpcfto-box-checkbox .stm-lms-email-header-toggle-arrow i,
+#emails_to_instructors .wpcfto-box-checkbox .stm-lms-email-header-toggle-arrow i,
+#emails_to_students .wpcfto-box-checkbox .stm-lms-email-header-toggle-arrow i,
+#system_notifications .wpcfto-box-checkbox .stm-lms-email-header-toggle-arrow i {
+    transform: rotate(-180deg);
+}
+
+/* Collapsed state: arrow pointing down */
+#emails_to_admin .wpcfto-box-checkbox.stm-lms-email-section-collapsed .stm-lms-email-header-toggle-arrow i,
+#emails_to_instructors .wpcfto-box-checkbox.stm-lms-email-section-collapsed .stm-lms-email-header-toggle-arrow i,
+#emails_to_students .wpcfto-box-checkbox.stm-lms-email-section-collapsed .stm-lms-email-header-toggle-arrow i,
+#system_notifications .wpcfto-box-checkbox.stm-lms-email-section-collapsed .stm-lms-email-header-toggle-arrow i {
+    transform: rotate(0deg) !important;
+}
+
+#emails_to_admin .stm-lms-email-header-toggle-arrow i,
+#emails_to_instructors .stm-lms-email-header-toggle-arrow i,
+#emails_to_students .stm-lms-email-header-toggle-arrow i,
+#system_notifications .stm-lms-email-header-toggle-arrow i {
+    display: inline-block;
+    font-size: 6px;
+    transition: transform 0.2s ease;
+}
+
+.stm_lms_membership_course_available_for_admin_enable .wpcfto-field-aside {
+    width: 50%!important;
+}
+
+.stm_lms_membership_course_available_for_admin_enable .wpcfto-field-content {
+    width: 46.7%!important;
+}
+.stm_lms_user_added_via_manage_students_enable .wpcfto-field-aside {
+    width: 50%!important;
+}
+
+.stm_lms_user_added_via_manage_students_enable .wpcfto-field-content {
+    width: 46.5%!important;
+}
+.stm_lms_enterprise_new_group_course_enable .wpcfto-field-aside {
+    width: 50%!important;
+}
+
+.stm_lms_enterprise_new_group_course_enable .wpcfto-field-content {
+    width: 46.5%!important;
+}
+
+.wpcfto-box-child.stm-lms-email-force-visible {
+	display: block !important;
+}
+
+/* Collapsed state: arrow pointing down */
+.wpcfto-box-checkbox.stm-lms-email-section-collapsed .stm-lms-email-header-toggle-arrow i {
+    transform: rotate(0deg) !important;
+}
+
+/* 1) Fixed menu width = 240px (as you specified) */
+#suggestionMenu {
+    position: absolute;
+    z-index: 9999;
+    padding: 4px;
+    display: none;        /* hidden by default */
+    overflow-y: auto;
+    border-radius: 8px;
+    background: #FFF;
+    min-width: 270px;
+    /* default */
+    box-shadow: 0px 327px 91px 0px rgba(0, 0, 0, 0.00), 0px 209px 84px 0px rgba(0, 0, 0, 0.01), 0px 118px 71px 0px rgba(0, 0, 0, 0.05), 0px 52px 52px 0px rgba(0, 0, 0, 0.09), 0px 13px 29px 0px rgba(0, 0, 0, 0.10);
+}
+
+/* 2) Each suggestion-item is a flex container with space-between */
+.suggestion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* 3) Hover state */
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* 4) When an item is “focused” via keyboard, give it a different background */
+.suggestion-item.focused {
+    background-color: #e6f2ff;    /* light blue highlight */
+}
+
+/* 5) Left and right spans, with custom colors */
+.suggestion-left,
+.suggestion-right {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.suggestion-left {
+    color: #646D78;
+    margin-right: 20px;
+}
+.suggestion-right {
+    color: #227AFF;
+}
+
+.smart-tag-footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.smart-tag-button {
+    position: absolute;
+    bottom: -6px;
+    right: 10px;
+    z-index: 1;
+    background-color: #2d3748;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.smart-tag-button:hover {
+    background-color: #1a202c;
+}
+
+.smart-tag-icon {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+}
+
+.smart-tag-button.open .smart-tag-icon {
+    transform: rotate(180deg);
+}
+
+.smart-tag-button.open .smart-tag-icon {
+    transform: rotate(180deg);
+}
+
+.smart-tag-tip {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #646D78;
+}
+
+.stm-lms-invalid {
+    border-color: #e53935 !important;
+    box-shadow: 0 0 0 1px rgba(229, 57, 53, 0.25);
+}
+
+#suggestionMenu {
+    position: absolute;
+    z-index: 9999;
+    padding: 4px;
+    display: none;
+    overflow-y: auto;
+    border-radius: 8px;
+    background: #FFF;
+    min-width: 270px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.15s ease;
+}
+.stm_lms_email_inactivity_students_inactive_days.wpcfto-box-of-stm_lms_email_inactivity_students_inactive_days.number,
+.stm_lms_time_limit_expiration_reminder_email_send_email_before.stm_lms_time_limit_expiration_reminder_email_send_email_before.text,
+.wpcfto-box-text.stm_lms_new_order_title.wpcfto-box-of-stm_lms_new_order_title.text,
+.wpcfto-box-text.stm_lms_new_order_instructor_title.wpcfto-box-of-stm_lms_new_order_instructor_title.text,
+.wpcfto-box-text.stm_lms_new_order_accepted_title.wpcfto-box-of-stm_lms_new_order_accepted_title.text{
+    margin-top: 30px !important;
+}
+.stm_metaboxes_grid__inner #instructors .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #lessons .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #enterprise .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #upcoming-course-status .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #order .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #certificates .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #course .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #assignment .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #reports .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #emails_to_instructors .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #emails_to_students .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #emails_to_admin .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #system_notifications .wpcfto-field-description.wpcfto-field-description__before.description,
+.stm_metaboxes_grid__inner #account .wpcfto-field-description.wpcfto-field-description__before.description {
+    position: absolute;
+    left: 39%;
+    top: 40px;
+    font-size: 13px;
+    color: #4D5E6F;
+}
+#order {
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_title.wpcfto-box-of-stm_lms_new_order_title.text,
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_accepted_title.wpcfto-box-of-stm_lms_new_order_accepted_title.text,
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_instructor_title.wpcfto-box-of-stm_lms_new_order_instructor_title.text {
+        margin-bottom: 20px;
+    }
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_accepted_subject.wpcfto-box-of-stm_lms_new_order_accepted_subject.text .wpcfto-field-description.wpcfto-field-description__before.description,
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_instructor_subject.wpcfto-box-of-stm_lms_new_order_instructor_subject.text .wpcfto-field-description.wpcfto-field-description__before.description,
+    .wpcfto-box-child.column-1.wpcfto-box-text.stm_lms_new_order_subject.wpcfto-box-of-stm_lms_new_order_subject.text .wpcfto-field-description.wpcfto-field-description__before.description {
+        top: 102px !important;
+    }
+}
+
+.wpcfto-box-trumbowyg{
+    margin-top: 20px !important;
+}

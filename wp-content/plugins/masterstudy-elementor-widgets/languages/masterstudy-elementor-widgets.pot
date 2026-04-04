@@ -1,0 +1,1671 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Masterstudy Elementor Widgets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-04 07:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.1; wp-5.9.2\n"
+"X-Domain: masterstudy-elementor-widgets"
+
+#. 1: Plugin name 2: Elementor
+#: masterstudy-elementor-widgets.php:235
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#. 1: Plugin name 2: Elementor 3: Required Elementor version
+#. 1: Plugin name 2: PHP 3: Required PHP version
+#: masterstudy-elementor-widgets.php:251 masterstudy-elementor-widgets.php:268
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: widgets/icon_button.php:166
+msgid "10px"
+msgstr ""
+
+#: widgets/icon_button.php:167
+msgid "11px"
+msgstr ""
+
+#: widgets/icon_button.php:168
+msgid "12px"
+msgstr ""
+
+#: widgets/icon_button.php:169
+msgid "13px"
+msgstr ""
+
+#: widgets/icon_button.php:170
+msgid "14px"
+msgstr ""
+
+#: widgets/icon_button.php:171
+msgid "15px"
+msgstr ""
+
+#: widgets/icon_button.php:172
+msgid "16px"
+msgstr ""
+
+#: widgets/icon_button.php:173
+msgid "17px"
+msgstr ""
+
+#: widgets/icon_button.php:174
+msgid "18px"
+msgstr ""
+
+#: widgets/icon_button.php:175
+msgid "19px"
+msgstr ""
+
+#: widgets/icon_button.php:176
+msgid "20px"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:11
+msgid "Actions"
+msgstr ""
+
+#: widgets/course_lesson.php:96 widgets/course_lessons.php:101
+msgid "Activity"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:159
+msgid "Add answer..."
+msgstr ""
+
+#: widgets/vc_cta.php:193
+msgid "Add button"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/drip_content.php:105
+msgid "Add dependency"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/drip_content.php:27
+msgid "Add must be done lesson"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:151
+msgid "Add question..."
+msgstr ""
+
+#: widgets/image_box.php:60
+msgid "Align"
+msgstr ""
+
+#: widgets/vc_cta.php:313
+msgid "Alignment"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:21
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:92
+msgid "All"
+msgstr ""
+
+#: widgets/experts.php:78
+msgid "All teachers"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/faq.php:16
+msgid "Answer"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:870 masterstudy-elementor-widgets.php:914
+#: settings/hfe.php:22
+msgid "Appearance"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:891
+msgid "Appearance Color"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:434
+msgid "Ascending"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:418
+msgid "Author"
+msgstr ""
+
+#: widgets/image_box.php:146 widgets/vc_cta.php:233
+msgid "Background Color"
+msgstr ""
+
+#: widgets/vc_cta.php:244
+msgid "Background Color on hover"
+msgstr ""
+
+#: widgets/header/popup_links.php:80
+msgid "Become an Instructor"
+msgstr ""
+
+#: widgets/vc_cta.php:291
+msgid "Border Color"
+msgstr ""
+
+#: widgets/vc_cta.php:302
+msgid "Border Color on hover"
+msgstr ""
+
+#: widgets/icon_box.php:92 widgets/vc_cta.php:200
+msgid "Bottom"
+msgstr ""
+
+#: widgets/icon_box.php:176
+msgid "Box Align"
+msgstr ""
+
+#: widgets/icon_box.php:101
+msgid "Box background color"
+msgstr ""
+
+#: widgets/icon_box.php:117
+msgid "Box icon color"
+msgstr ""
+
+#: widgets/product_categories.php:92
+msgid "Box text Color"
+msgstr ""
+
+#: widgets/icon_box.php:109
+msgid "Box text color"
+msgstr ""
+
+#: widgets/buddypress_groups.php:15
+msgid "Buddypress Groups"
+msgstr ""
+
+#: widgets/buddypress_instructors.php:15
+msgid "Buddypress Instructors"
+msgstr ""
+
+#: widgets/icon_button.php:199 widgets/vc_cta.php:185
+msgid "Button"
+msgstr ""
+
+#: widgets/icon_button.php:76
+msgid "Button alignment"
+msgstr ""
+
+#: widgets/icon_button.php:119 widgets/header/sign_up.php:87
+msgid "Button Background Color"
+msgstr ""
+
+#: widgets/icon_button.php:127
+msgid "Button Background Color Hover"
+msgstr ""
+
+#: widgets/icon_button.php:135
+msgid "Button Border Color"
+msgstr ""
+
+#: widgets/icon_button.php:143
+msgid "Button Border Color Hover"
+msgstr ""
+
+#: widgets/mailchimp.php:61
+msgid "Button color"
+msgstr ""
+
+#: widgets/icon_button.php:90
+msgid "Button Size"
+msgstr ""
+
+#: widgets/icon_button.php:45 widgets/image_box.php:126
+msgid "Button Text"
+msgstr ""
+
+#: widgets/icon_button.php:103 widgets/header/sign_up.php:98
+msgid "Button Text Color"
+msgstr ""
+
+#: widgets/icon_button.php:111
+msgid "Button Text Color Hover"
+msgstr ""
+
+#: widgets/pricing_plan.php:125
+msgid "Buy"
+msgstr ""
+
+#: widgets/vc_cta.php:10
+msgid "Call to action"
+msgstr ""
+
+#: widgets/product_categories.php:50
+msgid "Card"
+msgstr ""
+
+#: widgets/product_categories.php:48
+msgid "Carousel"
+msgstr ""
+
+#: widgets/featured_products.php:155 widgets/product_categories.php:59
+msgid "Carousel Auto Scroll"
+msgstr ""
+
+#: widgets/header/courses_search.php:105
+msgid "Categories Background Color"
+msgstr ""
+
+#: widgets/header/courses_search.php:119
+msgid "Categories Color"
+msgstr ""
+
+#: widgets/header/courses_search.php:133
+msgid "Categories dropdown background"
+msgstr ""
+
+#: widgets/header/courses_search.php:147
+msgid "Categories dropdown color"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:462
+msgid "Categories IDs"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:275
+msgid "Categories:"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:559 widgets/icon_button.php:79
+#: widgets/product_categories.php:103 widgets/stats_counter.php:116
+msgid "Center"
+msgstr ""
+
+#: widgets/certificate.php:15
+msgid "Certificate"
+msgstr ""
+
+#: widgets/certificate.php:45
+msgid "Certificate name"
+msgstr ""
+
+#: widgets/certificate.php:54
+msgid "Certificate Print"
+msgstr ""
+
+#: widgets/charts.php:15
+msgid "Charts"
+msgstr ""
+
+#: widgets/charts.php:232 widgets/charts.php:241
+msgid "Check module in preview mode."
+msgstr ""
+
+#: widgets/course_lesson.php:86 widgets/course_lessons.php:91
+msgid "Choose Badge"
+msgstr ""
+
+#: widgets/featured_products.php:132
+msgid "Choose category"
+msgstr ""
+
+#: widgets/featured_products.php:112
+msgid "Choose expert"
+msgstr ""
+
+#: widgets/sign_up_now.php:64
+msgid "Choose form"
+msgstr ""
+
+#: widgets/contact.php:55
+msgid "Choose Image"
+msgstr ""
+
+#: widgets/featured_products.php:122
+msgid "Choose tag"
+msgstr ""
+
+#: widgets/share.php:54 widgets/sidebar.php:53
+msgid "Code"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:591 masterstudy-elementor-widgets.php:617
+#: widgets/charts.php:132 widgets/charts.php:184 widgets/color_separator.php:46
+#: widgets/header/login.php:98 widgets/header/popup_links.php:120
+#: widgets/header/wishlist.php:89 widgets/header/wpml_dropdown.php:78
+msgid "Color"
+msgstr ""
+
+#: widgets/color_separator.php:15
+msgid "Colored Separator"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:422
+msgid "Comment count"
+msgstr ""
+
+#: widgets/contact.php:16
+msgid "Contact"
+msgstr ""
+
+#: widgets/contact_form_7.php:15
+msgid "Contact Form 7"
+msgstr ""
+
+#: widgets/post_author.php:38 widgets/post_info.php:38 widgets/post_list.php:38
+#: widgets/post_tags.php:38 widgets/pricing_plan.php:38
+#: widgets/product_categories.php:38 widgets/share.php:38
+#: widgets/sidebar.php:38 widgets/sign_up_now.php:48
+#: widgets/stats_counter.php:38 widgets/teachers_grid.php:48
+#: widgets/testimonials.php:48 widgets/vc_cta.php:26
+#: widgets/vc_empty_space.php:38 widgets/vc_pie_chart.php:27
+msgid "Content"
+msgstr ""
+
+#: widgets/course_lessons.php:119
+msgid "Content placeholder"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:45
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:98
+msgid "Correct"
+msgstr ""
+
+#: widgets/countdown.php:15
+msgid "Countdown"
+msgstr ""
+
+#: widgets/stats_counter.php:152
+msgid "Counter text color"
+msgstr ""
+
+#: widgets/stats_counter.php:154
+msgid "Counter Text color(yellow - default)"
+msgstr ""
+
+#: widgets/stats_counter.php:161
+msgid "Counter text font size (px)"
+msgstr ""
+
+#: widgets/stats_counter.php:53
+msgid "Counter Value"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:32
+msgid "Course"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:9
+msgid "Course ID"
+msgstr ""
+
+#: widgets/course_lesson.php:15
+msgid "Course Lesson"
+msgstr ""
+
+#: widgets/header/courses_search.php:15
+msgid "Courses Search"
+msgstr ""
+
+#: widgets/vc_pie_chart.php:75
+msgid "Custom Color"
+msgstr ""
+
+#: widgets/post_list.php:119
+msgid "Custom color"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:17
+msgid "Custom Heading"
+msgstr ""
+
+#: widgets/icon_box.php:129
+msgid "Dark"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:416
+msgid "Date"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:874 masterstudy-elementor-widgets.php:918
+msgid "Default"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:435
+msgid "Descending"
+msgstr ""
+
+#: widgets/charts.php:42
+msgid "Design"
+msgstr ""
+
+#: widgets/featured_products.php:227
+msgid "Don't Show comments number"
+msgstr ""
+
+#: widgets/featured_products.php:211
+msgid "Don't Show price"
+msgstr ""
+
+#: widgets/featured_products.php:219
+msgid "Don't Show rating"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:23
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:67
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:94
+msgid "Draft"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/drip_content.php:11
+msgid "Drip Content"
+msgstr ""
+
+#: widgets/stats_counter.php:62
+msgid "Duration"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:55
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:41
+msgid "Edit"
+msgstr ""
+
+#: widgets/vc_cta.php:53 widgets/vc_cta.php:95 widgets/vc_cta.php:156
+#: widgets/vc_cta.php:400 widgets/vc_custom_heading.php:211
+#: widgets/vc_empty_space.php:55
+msgid "Element ID"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:534
+msgid "Element tag"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:237 masterstudy-elementor-widgets.php:253
+msgid "Elementor"
+msgstr ""
+
+#: import/templates/import-header.php:6
+msgid "Elementor Library"
+msgstr ""
+
+#: widgets/contact.php:93
+msgid "Email"
+msgstr ""
+
+#: widgets/vc_empty_space.php:15
+msgid "Empty Space"
+msgstr ""
+
+#: widgets/vc_cta.php:172
+msgid "Enable Particles"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:20
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:73
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:205
+msgid "Enter answer"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:463
+msgid "Enter category IDs separated by comma. Ex.: 45,46,47"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/faq.php:17
+msgid "Enter FAQ answer"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/faq.php:12
+msgid "Enter FAQ question"
+msgstr ""
+
+#: widgets/icon_box.php:271
+msgid "Enter Icon Box radius in px"
+msgstr ""
+
+#: widgets/icon_box.php:192 widgets/stats_counter.php:104
+msgid "Enter icon height in px"
+msgstr ""
+
+#: widgets/icon_box.php:322
+msgid "Enter Icon radius in px"
+msgstr ""
+
+#: widgets/stats_counter.php:85
+msgid "Enter icon size in px"
+msgstr ""
+
+#: widgets/icon_box.php:202 widgets/stats_counter.php:94
+msgid "Enter icon width in px"
+msgstr ""
+
+#: widgets/contact.php:68
+msgid ""
+"Enter image size. Example: \"thumbnail\", \"medium\", \"large\", \"full\" or "
+"other sizes defined by current theme. Alternatively enter image size in "
+"pixels: 200x100 (Width x Height). Leave empty to use \"default\" size."
+msgstr ""
+
+#: widgets/teachers_grid.php:66
+msgid ""
+"Enter image size. Example: \"thumbnail\", \"medium\", \"large\", \"full\" or "
+"other sizes defined by current theme. Alternatively enter image size in "
+"pixels: 200x100 (Width x Height). Leave empty to use \"projects_gallery\" "
+"size."
+msgstr ""
+
+#: settings/hfe.php:39
+msgid "Enter number of px needed to scroll down to show sticky header"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:444
+msgid "Enter post IDs separated by comma. Ex.: 45,46,47"
+msgstr ""
+
+#: wp-custom-fields-theme-options/helpers/file_upload.php:20
+msgid "Error occurred, please try again"
+msgstr ""
+
+#: widgets/event_info.php:15
+msgid "Event Info"
+msgstr ""
+
+#: widgets/events_grid.php:15
+msgid "Events Grid"
+msgstr ""
+
+#: widgets/events_grid.php:45
+msgid "Events per page"
+msgstr ""
+
+#: widgets/course_lesson.php:89 widgets/course_lessons.php:94
+msgid "Exam"
+msgstr ""
+
+#: widgets/course_lesson.php:95 widgets/course_lessons.php:100
+msgid "Exercise"
+msgstr ""
+
+#: widgets/experts.php:15
+msgid "Experts"
+msgstr ""
+
+#: widgets/stm_video.php:67 widgets/vc_cta.php:61 widgets/vc_cta.php:103
+#: widgets/vc_cta.php:164 widgets/vc_cta.php:411
+#: widgets/vc_custom_heading.php:220 widgets/vc_empty_space.php:63
+msgid "Extra class name"
+msgstr ""
+
+#: widgets/experts.php:58 widgets/post_list.php:64 widgets/testimonials.php:69
+msgid "Fill field with number only"
+msgstr ""
+
+#: widgets/flying_students.php:15
+msgid "Flying Students"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:569 masterstudy-elementor-widgets.php:602
+msgid "Font size (px)"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:152
+msgid "Font weight"
+msgstr ""
+
+#: widgets/header/popup_links.php:101
+msgid "For Enterprise"
+msgstr ""
+
+#: widgets/course_lesson.php:93 widgets/course_lessons.php:98
+msgid "Free"
+msgstr ""
+
+#: widgets/gallery_grid.php:15
+msgid "Gallery Grid"
+msgstr ""
+
+#: widgets/gallery_grid.php:62
+msgid "Gallery per page"
+msgstr ""
+
+#: patch/convert_module.php:109
+msgid "Get now"
+msgstr ""
+
+#: settings/hfe.php:25
+msgid "Header Absolute position (lies on top of the following elements)"
+msgstr ""
+
+#: widgets/vc_cta.php:35
+msgid "Heading"
+msgstr ""
+
+#: widgets/vc_empty_space.php:45
+msgid "Height"
+msgstr ""
+
+#: widgets/charts.php:92
+msgid "Height (px)"
+msgstr ""
+
+#: widgets/header/popup_links.php:131
+msgid "Hover Color"
+msgstr ""
+
+#: widgets/icon_box.php:85
+msgid "Hover position"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://masterstudy.stylemixthemes.com/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://stylemixthemes.com/"
+msgstr ""
+
+#: widgets/pricing_plan.php:94
+msgid "https://your-link.com"
+msgstr ""
+
+#: widgets/stats_counter.php:71 widgets/vc_cta.php:344
+#: widgets/header/wishlist.php:78
+msgid "Icon"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:105
+msgid "Icon - bottom position"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:60
+msgid "Icon - Position"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:74
+msgid "Icon - right position"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:89
+msgid "Icon - top position"
+msgstr ""
+
+#: widgets/icon_box.php:160
+msgid "Icon Align"
+msgstr ""
+
+#: widgets/vc_cta.php:381
+msgid "Icon Alignment"
+msgstr ""
+
+#: widgets/stats_counter.php:136
+msgid "Icon background color"
+msgstr ""
+
+#: widgets/icon_box.php:15
+msgid "Icon Box"
+msgstr ""
+
+#: widgets/icon_box.php:269
+msgid "Icon Box radius"
+msgstr ""
+
+#: widgets/icon_button.php:15
+msgid "Icon Button"
+msgstr ""
+
+#: widgets/icon_box.php:210 widgets/vc_cta.php:359
+msgid "Icon Color"
+msgstr ""
+
+#: widgets/vc_cta.php:370
+msgid "Icon Color on hover"
+msgstr ""
+
+#: widgets/icon_box.php:190 widgets/stats_counter.php:101
+msgid "Icon Height"
+msgstr ""
+
+#: widgets/product_categories.php:124
+msgid "Icon height"
+msgstr ""
+
+#: widgets/icon_box.php:320
+msgid "Icon radius"
+msgstr ""
+
+#: widgets/icon_box.php:150 widgets/icon_button.php:163
+#: widgets/stats_counter.php:82
+msgid "Icon Size"
+msgstr ""
+
+#: widgets/product_categories.php:114
+msgid "Icon size"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:52
+msgid "Icon size (px)"
+msgstr ""
+
+#: widgets/icon_box.php:200 widgets/stats_counter.php:92
+msgid "Icon Width"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:417
+msgid "ID"
+msgstr ""
+
+#: widgets/image_box.php:83 widgets/stm_video.php:56
+msgid "Image"
+msgstr ""
+
+#: widgets/image_box.php:15
+msgid "Image Box"
+msgstr ""
+
+#: widgets/image_box.php:94 widgets/teachers_grid.php:64
+msgid "Image Size"
+msgstr ""
+
+#: widgets/contact.php:66
+msgid "Image size"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:32
+msgid "Import Course"
+msgstr ""
+
+#: import/templates/import-button.php:2
+msgid "Import Template"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components_js/udemy/search.php:38
+msgid "Importing Course"
+msgstr ""
+
+#: widgets/stats_counter.php:169
+msgid "Include Border"
+msgstr ""
+
+#: import/templates/single-import-template.php:15
+msgid "Insert"
+msgstr ""
+
+#: wp-custom-fields-theme-options/helpers/file_upload.php:58
+msgid "Invalid file extension"
+msgstr ""
+
+#: widgets/contact.php:75
+msgid "Job"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:560
+msgid "Justify"
+msgstr ""
+
+#: widgets/countdown.php:45
+msgid "Labels color"
+msgstr ""
+
+#: widgets/vc_empty_space.php:71
+msgid "Laptop Height"
+msgstr ""
+
+#: widgets/featured_products.php:166
+msgid "Leave empty to display all"
+msgstr ""
+
+#: widgets/course_lesson.php:91 widgets/course_lessons.php:96
+msgid "Lecture"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:557 widgets/icon_box.php:91
+#: widgets/icon_button.php:80 widgets/product_categories.php:104
+#: widgets/sidebar.php:66 widgets/stats_counter.php:114 widgets/vc_cta.php:201
+msgid "Left"
+msgstr ""
+
+#: widgets/charts.php:69
+msgid "Legend Position"
+msgstr ""
+
+#: widgets/course_lesson.php:82 widgets/course_lessons.php:86
+msgid "Lesson badge"
+msgstr ""
+
+#: widgets/course_lesson.php:122 widgets/course_lessons.php:128
+msgid "Lesson meta"
+msgstr ""
+
+#: widgets/course_lesson.php:45 widgets/course_lessons.php:49
+msgid "Lesson Title"
+msgstr ""
+
+#: widgets/header/courses_search.php:90
+msgid "Limit categories"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:580 masterstudy-elementor-widgets.php:610
+msgid "Line height (px)"
+msgstr ""
+
+#: widgets/header/popup_links.php:88
+msgid "Link 1 icon"
+msgstr ""
+
+#: widgets/header/popup_links.php:78
+msgid "Link 1 title"
+msgstr ""
+
+#: widgets/header/popup_links.php:109
+msgid "Link 2 icon"
+msgstr ""
+
+#: widgets/header/popup_links.php:99
+msgid "Link 2 title"
+msgstr ""
+
+#: widgets/icon_box.php:125
+msgid "Link color style"
+msgstr ""
+
+#: widgets/icon_button.php:68
+msgid "Link tooltip (title)"
+msgstr ""
+
+#: widgets/product_categories.php:49
+msgid "List"
+msgstr ""
+
+#: widgets/header/login.php:80
+msgid "Log in"
+msgstr ""
+
+#: widgets/header/login.php:15
+msgid "Login"
+msgstr ""
+
+#: widgets/header/login.php:87
+msgid "Login icon"
+msgstr ""
+
+#: widgets/mailchimp.php:15
+msgid "Mailchimp"
+msgstr ""
+
+#: settings/hfe.php:32
+msgid "Make Header Sticky"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:33
+msgid "Manage actions"
+msgstr ""
+
+#: widgets/icon_box.php:239 widgets/icon_box.php:290
+#: widgets/header/courses_search.php:40 widgets/header/login.php:40
+#: widgets/header/popup_links.php:40 widgets/header/sign_up.php:40
+#: widgets/header/wishlist.php:40 widgets/header/wpml_dropdown.php:40
+msgid "Margin"
+msgstr ""
+
+#: widgets/gallery_grid.php:54
+msgid "Masonry Mode"
+msgstr ""
+
+#. Name of the plugin
+msgid "Masterstudy Elementor Widgets"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:236 masterstudy-elementor-widgets.php:252
+#: masterstudy-elementor-widgets.php:269
+msgid "Masterstudy Elementor widgets"
+msgstr ""
+
+#. Description of the plugin
+msgid "Masterstudy Elementor Widgets."
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:423
+msgid "menu_order"
+msgstr ""
+
+#: widgets/featured_products.php:96
+msgid "Meta sorting key"
+msgstr ""
+
+#: widgets/vc_empty_space.php:87
+msgid "Mobile Height"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:420
+msgid "Modified"
+msgstr ""
+
+#: widgets/multy_separator.php:15
+msgid "Multy Separator"
+msgstr ""
+
+#: widgets/contact.php:46
+msgid "Name"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/faq.php:25
+msgid "New FAQ item"
+msgstr ""
+
+#: widgets/vc_cta.php:198
+msgid "No"
+msgstr ""
+
+#: widgets/icon_box.php:88 widgets/stats_counter.php:172
+msgid "None"
+msgstr ""
+
+#: widgets/icon_button.php:94
+msgid "Normal"
+msgstr ""
+
+#: widgets/featured_products.php:173 widgets/product_categories.php:76
+msgid "Number of items per row"
+msgstr ""
+
+#: widgets/featured_products.php:163 widgets/post_list.php:62
+#: widgets/product_categories.php:67
+msgid "Number of items to output"
+msgstr ""
+
+#: widgets/post_list.php:71
+msgid "Number of items to output per row"
+msgstr ""
+
+#: widgets/testimonials.php:103
+msgid "Number of letters"
+msgstr ""
+
+#: widgets/experts.php:91
+msgid "Number of Teachers per row"
+msgstr ""
+
+#: widgets/experts.php:55
+msgid "Number of Teachers to output"
+msgstr ""
+
+#: widgets/testimonials.php:116
+msgid "Number of testimonials per row"
+msgstr ""
+
+#: widgets/testimonials.php:67
+msgid "Number of testimonials to output"
+msgstr ""
+
+#: widgets/course_lessons.php:13
+msgid "Offline Course Lessons"
+msgstr ""
+
+#: widgets/featured_products.php:188
+msgid "Order"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:412 widgets/featured_products.php:201
+msgid "Order by"
+msgstr ""
+
+#: widgets/icon_box.php:254 widgets/icon_box.php:305
+#: widgets/header/courses_search.php:52 widgets/header/login.php:52
+#: widgets/header/popup_links.php:52 widgets/header/sign_up.php:52
+#: widgets/header/wishlist.php:52 widgets/header/wpml_dropdown.php:52
+msgid "Padding"
+msgstr ""
+
+#: widgets/contact.php:84
+msgid "Phone"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:270
+msgid "PHP"
+msgstr ""
+
+#: widgets/vc_pie_chart.php:12
+msgid "Pie chart"
+msgstr ""
+
+#: widgets/pricing_plan.php:89
+msgid "Plan Button"
+msgstr ""
+
+#: widgets/pricing_plan.php:104
+msgid "Plan Button Text"
+msgstr ""
+
+#: widgets/pricing_plan.php:54
+msgid "Plan Color"
+msgstr ""
+
+#: widgets/pricing_plan.php:71
+msgid "Plan payment period"
+msgstr ""
+
+#: widgets/pricing_plan.php:62
+msgid "Plan price"
+msgstr ""
+
+#: widgets/pricing_plan.php:80
+msgid "Plan Text"
+msgstr ""
+
+#: widgets/pricing_plan.php:45
+msgid "Plan title"
+msgstr ""
+
+#: wp-custom-fields-theme-options/helpers/file_upload.php:47
+msgid "Please, select file"
+msgstr ""
+
+#: patch-api/api.php:44
+msgid "Please, select Post type"
+msgstr ""
+
+#: widgets/header/popup_links.php:15
+msgid "Popup Links"
+msgstr ""
+
+#: patch-api/api.php:127
+#, php-format
+msgid "Post \"%s\" patched"
+msgstr ""
+
+#: widgets/post_author.php:15
+msgid "Post Author"
+msgstr ""
+
+#: widgets/post_comments.php:15
+msgid "Post Comments"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:404
+msgid "Post count"
+msgstr ""
+
+#: widgets/post_list.php:52
+msgid "Post Data"
+msgstr ""
+
+#: patch-api/api.php:115
+msgid "Post id is undefined. Stopping."
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:443
+msgid "Post IDs"
+msgstr ""
+
+#: widgets/post_info.php:15
+msgid "Post Info"
+msgstr ""
+
+#: widgets/post_list.php:15
+msgid "Post List"
+msgstr ""
+
+#: widgets/post_tags.php:15
+msgid "Post Tags"
+msgstr ""
+
+#: widgets/course_lesson.php:94 widgets/course_lessons.php:99
+msgid "Practice"
+msgstr ""
+
+#: widgets/course_lesson.php:104 widgets/course_lessons.php:110
+msgid "Preview video"
+msgstr ""
+
+#: widgets/featured_products.php:243
+msgid "Price Badge (Free) background color"
+msgstr ""
+
+#: widgets/featured_products.php:235
+msgid "Price Badge background color"
+msgstr ""
+
+#: widgets/pricing_plan.php:15
+msgid "Pricing Plan"
+msgstr ""
+
+#: widgets/course_lesson.php:54 widgets/course_lessons.php:58
+msgid "Private"
+msgstr ""
+
+#: widgets/course_lesson.php:113
+msgid "Private lesson content placeholder"
+msgstr ""
+
+#: widgets/product_categories.php:15
+msgid "Product Categories"
+msgstr ""
+
+#: widgets/featured_products.php:15
+msgid "Products List (All, featured, teacher courses)"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:61
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:44
+msgid "Publish"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:22
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:93
+msgid "Published"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:379
+msgid "Query Builder"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/faq.php:11
+msgid "Question"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:32
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:85
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:175
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:217
+msgid "Question Explanation"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/answers.php:268
+msgid "Questions:"
+msgstr ""
+
+#: widgets/course_lesson.php:90 widgets/course_lessons.php:95
+msgid "Quiz"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:421
+msgid "Rand"
+msgstr ""
+
+#: widgets/course_lessons.php:148
+msgid "Repeater List"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:558 widgets/icon_box.php:90
+#: widgets/icon_button.php:81 widgets/product_categories.php:105
+#: widgets/sidebar.php:67 widgets/stats_counter.php:115
+#: widgets/stats_counter.php:173 widgets/vc_cta.php:202
+msgid "Right"
+msgstr ""
+
+#: widgets/header/courses_search.php:161
+msgid "Search background Color"
+msgstr ""
+
+#: widgets/header/courses_search.php:175
+msgid "Search Color"
+msgstr ""
+
+#: widgets/course_lessons.php:37
+msgid "Section Title"
+msgstr ""
+
+#: widgets/experts.php:45 widgets/testimonials.php:55
+msgid "Section title"
+msgstr ""
+
+#: widgets/course_lessons.php:39
+msgid "Section Title here"
+msgstr ""
+
+#: patch-api/api.php:99
+msgid "Seems like, all posts were patched!"
+msgstr ""
+
+#: widgets/contact_form_7.php:54
+msgid "Select form"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:394
+msgid "Select post type"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:452
+msgid "Select taxonomy"
+msgstr ""
+
+#: widgets/course_lesson.php:92 widgets/course_lessons.php:97
+msgid "Seminar"
+msgstr ""
+
+#: widgets/vc_cta.php:332
+msgid "Set full width button?"
+msgstr ""
+
+#: widgets/share.php:15
+msgid "Share"
+msgstr ""
+
+#: widgets/header/courses_search.php:78
+msgid "Show Categories"
+msgstr ""
+
+#: widgets/post_list.php:111
+msgid "Show comments tags"
+msgstr ""
+
+#: widgets/charts.php:59
+msgid "Show legend?"
+msgstr ""
+
+#: widgets/teachers_grid.php:73
+msgid "Show Pagination"
+msgstr ""
+
+#: widgets/post_list.php:95
+msgid "Show post categories"
+msgstr ""
+
+#: widgets/post_list.php:87
+msgid "Show post date"
+msgstr ""
+
+#: widgets/post_list.php:103
+msgid "Show post tags"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:736
+msgid "Show Post thumbnail"
+msgstr ""
+
+#: widgets/sidebar.php:15
+msgid "Sidebar"
+msgstr ""
+
+#: widgets/sidebar.php:63
+msgid "Sidebar position"
+msgstr ""
+
+#: widgets/header/sign_up.php:80
+msgid "Sign up"
+msgstr ""
+
+#: widgets/header/sign_up.php:15
+msgid "Sign Up Button"
+msgstr ""
+
+#: widgets/sign_up_now.php:15
+msgid "Sign Up Now"
+msgstr ""
+
+#: widgets/contact.php:102
+msgid "Skype"
+msgstr ""
+
+#: widgets/icon_button.php:93
+msgid "Small"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:431
+msgid "Sort order"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:173
+msgid "Source"
+msgstr ""
+
+#: widgets/testimonials.php:105
+msgid "Specify a number for the desired content length"
+msgstr ""
+
+#: widgets/icon_box.php:128
+msgid "Standart"
+msgstr ""
+
+#: widgets/stats_counter.php:15
+msgid "Stats Counter"
+msgstr ""
+
+#: settings/hfe.php:38
+msgid "Sticky threshold apply styles (px)"
+msgstr ""
+
+#: settings/hfe.php:50
+msgid "Sticky threshold background color"
+msgstr ""
+
+#: settings/hfe.php:8
+msgid "STM additional settings for Headers only"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:138
+msgid "Stripe Position"
+msgstr ""
+
+#: widgets/experts.php:65 widgets/image_box.php:46 widgets/stm_video.php:76
+#: widgets/testimonials.php:84
+msgid "Style"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:875 masterstudy-elementor-widgets.php:919
+#: widgets/stm_video.php:80 widgets/testimonials.php:87
+msgid "Style 1"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:876 widgets/stm_video.php:81
+#: widgets/testimonials.php:88
+msgid "Style 2"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:877 widgets/testimonials.php:89
+msgid "Style 3"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:878 widgets/testimonials.php:90
+msgid "Style 4"
+msgstr ""
+
+#: widgets/testimonials.php:91
+msgid "Style 5"
+msgstr ""
+
+#: widgets/testimonials.php:92
+msgid "Style 6"
+msgstr ""
+
+#: widgets/testimonials.php:93
+msgid "Style 7"
+msgstr ""
+
+#: widgets/testimonials.php:94
+msgid "Style 8"
+msgstr ""
+
+#. Author of the plugin
+msgid "Stylemix"
+msgstr ""
+
+#: widgets/vc_cta.php:77
+msgid "Subheading"
+msgstr ""
+
+#: widgets/buddypress_instructors.php:54 widgets/vc_custom_heading.php:121
+msgid "Subtitle"
+msgstr ""
+
+#: widgets/vc_custom_heading.php:130
+msgid "Subtitle Color"
+msgstr ""
+
+#: widgets/course_lesson.php:73 widgets/course_lessons.php:77
+msgid "Tab Text"
+msgstr ""
+
+#: widgets/vc_empty_space.php:79
+msgid "Tablet Height"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/drip_content.php:90
+msgid "Target lesson"
+msgstr ""
+
+#: widgets/teacher_detail.php:15
+msgid "Teacher Detail"
+msgstr ""
+
+#: widgets/teachers_grid.php:55
+msgid "Teacher per page"
+msgstr ""
+
+#: widgets/teachers_grid.php:15
+msgid "Teachers Grid "
+msgstr ""
+
+#: widgets/course_lesson.php:87 widgets/course_lessons.php:92
+msgid "Test"
+msgstr ""
+
+#: widgets/testimonials.php:15
+msgid "Testimonials"
+msgstr ""
+
+#: widgets/vc_cta.php:147 widgets/vc_cta.php:211 widgets/vc_cta.php:262
+#: widgets/vc_custom_heading.php:187
+msgid "Text"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:553
+msgid "Text align"
+msgstr ""
+
+#: widgets/stats_counter.php:111 widgets/vc_cta.php:118
+msgid "Text alignment"
+msgstr ""
+
+#: widgets/stats_counter.php:119
+msgid "Text alignment in block"
+msgstr ""
+
+#: widgets/product_categories.php:100
+msgid "Text box Align"
+msgstr ""
+
+#: widgets/testimonials.php:76
+msgid "Text Color"
+msgstr ""
+
+#: widgets/stats_counter.php:126 widgets/vc_cta.php:135
+msgid "Text color"
+msgstr ""
+
+#: widgets/vc_cta.php:273
+msgid "Text Color on hover"
+msgstr ""
+
+#: widgets/stats_counter.php:128
+msgid "Text color(white - default)"
+msgstr ""
+
+#: widgets/stats_counter.php:144
+msgid "Text font size (px)"
+msgstr ""
+
+#: widgets/teacher_detail.php:56
+msgid ""
+"This widget will call the teacher information from the custom Teachers post "
+"type."
+msgstr ""
+
+#: widgets/mailchimp.php:45
+msgid "Titile"
+msgstr ""
+
+#: masterstudy-elementor-widgets.php:419 widgets/buddypress_groups.php:45
+#: widgets/buddypress_instructors.php:45 widgets/charts.php:115
+#: widgets/charts.php:167 widgets/gallery_grid.php:45 widgets/icon_box.php:45
+#: widgets/image_box.php:74 widgets/share.php:45 widgets/sign_up_now.php:55
+#: widgets/stats_counter.php:45 widgets/stm_video.php:39
+#: widgets/vc_pie_chart.php:59 widgets/header/login.php:78
+#: widgets/header/sign_up.php:78
+#: wp-custom-fields-theme-options/metaboxes/components/udemy/search.php:10
+msgid "Title"
+msgstr ""
+
+#: widgets/mailchimp.php:53
+msgid "Title color"
+msgstr ""
+
+#: widgets/icon_box.php:69
+msgid "Title Holder"
+msgstr ""
+
+#: widgets/testimonials.php:57
+msgid "Title will be shown on the top of section"
+msgstr ""
+
+#: widgets/icon_box.php:89 widgets/vc_cta.php:199
+msgid "Top"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:24
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:71
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:95
+msgid "Trash"
+msgstr ""
+
+#: widgets/certificate.php:47
+msgid "Type Certificate name here"
+msgstr ""
+
+#: widgets/contact.php:95
+msgid "Type contact email here"
+msgstr ""
+
+#: widgets/contact.php:77
+msgid "Type contact job here"
+msgstr ""
+
+#: widgets/contact.php:48
+msgid "Type contact name here"
+msgstr ""
+
+#: widgets/contact.php:86
+msgid "Type contact phone here"
+msgstr ""
+
+#: widgets/contact.php:104
+msgid "Type contact skype here"
+msgstr ""
+
+#: widgets/image_box.php:96
+msgid "Type Image Size here"
+msgstr ""
+
+#: widgets/course_lesson.php:124 widgets/course_lessons.php:130
+msgid "Type Lesson meta here"
+msgstr ""
+
+#: widgets/course_lesson.php:47 widgets/course_lessons.php:51
+msgid "Type Lesson Title here"
+msgstr ""
+
+#: widgets/featured_products.php:165
+msgid "Type Number of items here"
+msgstr ""
+
+#: widgets/experts.php:57
+msgid "Type Number of Teachers here"
+msgstr ""
+
+#: widgets/pricing_plan.php:73
+msgid "Type period here"
+msgstr ""
+
+#: widgets/pricing_plan.php:106
+msgid "Type Plan Button Text here"
+msgstr ""
+
+#: widgets/pricing_plan.php:64
+msgid "Type Plan price here"
+msgstr ""
+
+#: widgets/pricing_plan.php:82
+msgid "Type Plan Text here"
+msgstr ""
+
+#: widgets/pricing_plan.php:47
+msgid "Type Plan Title here"
+msgstr ""
+
+#: widgets/course_lesson.php:106 widgets/course_lessons.php:112
+msgid "Type Preview video here"
+msgstr ""
+
+#: widgets/course_lesson.php:115 widgets/course_lessons.php:121
+msgid "Type Private lesson content placeholder here"
+msgstr ""
+
+#: widgets/experts.php:47
+msgid "Type Section Title here"
+msgstr ""
+
+#: widgets/buddypress_instructors.php:56
+msgid "Type Subtitle here"
+msgstr ""
+
+#: widgets/buddypress_groups.php:47 widgets/buddypress_instructors.php:47
+#: widgets/gallery_grid.php:47 widgets/icon_box.php:47 widgets/image_box.php:76
+#: widgets/share.php:47 widgets/sign_up_now.php:57
+msgid "Type Title here"
+msgstr ""
+
+#: widgets/header/popup_links.php:81 widgets/header/popup_links.php:102
+msgid "Type your title here"
+msgstr ""
+
+#: widgets/image_box.php:128
+msgid "TypeButton Text here"
+msgstr ""
+
+#: widgets/vc_pie_chart.php:67
+msgid "Units"
+msgstr ""
+
+#: wp-custom-fields-theme-options/metaboxes/components/manage_post_type.php:50
+msgid "Update Course"
+msgstr ""
+
+#: widgets/stm_video.php:47 widgets/vc_cta.php:43 widgets/vc_cta.php:85
+#: widgets/vc_cta.php:222 widgets/vc_custom_heading.php:200
+msgid "URL (Link)"
+msgstr ""
+
+#: widgets/charts.php:175 widgets/vc_pie_chart.php:43
+msgid "Value"
+msgstr ""
+
+#: widgets/vc_pie_chart.php:51
+msgid "Value Label"
+msgstr ""
+
+#: widgets/charts.php:140 widgets/charts.php:192
+msgid "Values"
+msgstr ""
+
+#: widgets/flying_students.php:46
+msgid "Vertical Align"
+msgstr ""
+
+#: widgets/course_lesson.php:88 widgets/course_lessons.php:93
+#: widgets/stm_video.php:12
+msgid "Video"
+msgstr ""
+
+#: widgets/featured_products.php:142 widgets/product_categories.php:45
+msgid "View type"
+msgstr ""
+
+#: widgets/teacher_detail.php:48
+msgid "Widget Information"
+msgstr ""
+
+#: widgets/vc_pie_chart.php:35
+msgid "Width"
+msgstr ""
+
+#: widgets/charts.php:84
+msgid "Width (px)"
+msgstr ""
+
+#: widgets/header/wishlist.php:15
+msgid "Wishlist"
+msgstr ""
+
+#: widgets/header/wpml_dropdown.php:15
+msgid "WPML Dropdown"
+msgstr ""
+
+#: widgets/charts.php:100
+msgid "X-axis values"
+msgstr ""
+
+#: widgets/charts.php:123
+msgid "Y-axis values"
+msgstr ""

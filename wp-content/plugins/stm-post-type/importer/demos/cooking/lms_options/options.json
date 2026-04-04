@@ -1,0 +1,136 @@
+{
+    "main_color": "#fa5852",
+    "secondary_color": "#fa5852",
+    "currency_symbol": "",
+    "currency_position": "left",
+    "currency_thousands": ",",
+    "currency_decimals": ".",
+    "decimals_num": 2,
+    "wocommerce_checkout": "",
+    "guest_checkout": "",
+    "guest_checkout_notice": "",
+    "author_fee": "10",
+    "courses_featured_num": 1,
+    "demo_import": "",
+    "courses_page": 939,
+    "courses_view": "grid",
+    "courses_per_page": "12",
+    "courses_per_row": "4",
+    "course_card_view": "center",
+    "course_card_style": "style_1",
+    "courses_categories_slug": "stm_lms_course_category",
+    "courses_image_size": "270x190",
+    "load_more_type": "button",
+    "disable_lazyload": "",
+    "enable_courses_filter": "",
+    "enable_courses_filter_notice": "",
+    "enable_courses_filter_category": "",
+    "enable_courses_filter_subcategory": "",
+    "enable_courses_filter_levels": "",
+    "enable_courses_filter_rating": "",
+    "enable_courses_filter_status": "",
+    "enable_courses_filter_instructor": "",
+    "enable_courses_filter_price": "",
+    "course_style": "default",
+    "course_tabs": "",
+    "course_tab_description": true,
+    "course_tab_curriculum": true,
+    "course_tab_faq": true,
+    "course_tab_announcement": true,
+    "course_tab_reviews": true,
+    "course_levels_config": [
+        {
+            "id": "beginner",
+            "label": "Beginner"
+        },
+        {
+            "id": "intermediate",
+            "label": "Intermediate"
+        },
+        {
+            "id": "advanced",
+            "label": "Advanced"
+        }
+    ],
+    "lesson_style": "default",
+    "redirect_after_purchase": "",
+    "course_allow_new_categories": "",
+    "allow_upload_video": "",
+    "enable_sticky": "",
+    "enable_sticky_title": "",
+    "enable_sticky_rating": "",
+    "enable_sticky_teacher": "",
+    "enable_sticky_category": "",
+    "enable_sticky_price": "",
+    "enable_sticky_button": "",
+    "enable_related_courses": "",
+    "related_option": "default",
+    "quiz_style": "default",
+    "payment_methods": {
+        "cash": {
+            "enabled": true,
+            "fields": {
+                "description": "Pay in our office"
+            }
+        },
+        "wire_transfer": {
+            "enabled": true,
+            "fields": {
+                "account_number": "",
+                "holder_name": "",
+                "bank_name": "",
+                "swift": "",
+                "description": "Pay via Wire Transfer"
+            }
+        },
+        "paypal": {
+            "enabled": true,
+            "fields": {
+                "paypal_email": "",
+                "currency_code": "USD",
+                "paypal_mode": "sandbox",
+                "description": ""
+            }
+        },
+        "stripe": {
+            "enabled": true,
+            "fields": {
+                "stripe_public_api_key": "",
+                "secret_key": "",
+                "description": "Stripe payment",
+                "currency": ""
+            }
+        }
+    },
+    "recaptcha_site_key": "",
+    "recaptcha_private_key": "",
+    "user_premoderation": "",
+    "register_as_instructor": "",
+    "disable_instructor_premoderation": "",
+    "instructor_can_add_students": "",
+    "course_premoderation": "",
+    "instructors_page": "",
+    "profile_style": "default",
+    "cancel_subscription": "",
+    "certificate_threshold": 70,
+    "certificate_banner": "",
+    "certificate_settings_title": "",
+    "certificate_image": "",
+    "certificate_title_notice": "",
+    "certificate_title": "",
+    "certificate_title_color": "",
+    "certificate_title_fsz": 60,
+    "certificate_subtitle_notice": "",
+    "certificate_subtitle": "",
+    "certificate_subtitle_color": "",
+    "certificate_subtitle_fsz": 40,
+    "certificate_text_notice": "",
+    "certificate_text": "",
+    "certificate_text_color": "",
+    "certificate_text_fsz": 17,
+    "addons": "",
+    "payout": "",
+    "gdpr_warning": "I agree with storage and handling of my data by this website.",
+    "gdpr_page": "",
+    "stm_lms_shortcodes": ""
+}

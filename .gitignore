@@ -28,29 +28,20 @@
 /wp-content/languages/
 /wp-content/autoptimize_404_handler.php
 /wp-content/masterstudy-lms-learning-management-system/
+/wp-content/webtoffee_export/
 
-# Plugins (installed via composer/download on deploy)
+# Free plugins (installed via download on deploy)
 /wp-content/plugins/elementor/
 /wp-content/plugins/header-footer-elementor/
-/wp-content/plugins/js_composer/
-/wp-content/plugins/revslider/
 /wp-content/plugins/woocommerce/
-/wp-content/plugins/masterstudy-lms-learning-management-system/
-/wp-content/plugins/masterstudy-lms-learning-management-system-pro/
-/wp-content/plugins/masterstudy-elementor-widgets/
-/wp-content/plugins/stm-post-type/
-/wp-content/plugins/stm-gdpr-compliance/
 /wp-content/plugins/addtoany/
 /wp-content/plugins/add-to-any/
-/wp-content/webtoffee_export/
 /wp-content/plugins/breadcrumb-navxt/
 /wp-content/plugins/buddypress/
 /wp-content/plugins/contact-form-7/
 /wp-content/plugins/paid-memberships-pro/
-/wp-content/plugins/envato-market/
 
-# Theme parent (installed from package)
-/wp-content/themes/masterstudy/
+# Default themes (not needed)
 /wp-content/themes/twentytwentyfour/
 /wp-content/themes/twentytwentythree/
 /wp-content/themes/twentytwentytwo/

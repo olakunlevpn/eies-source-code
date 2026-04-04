@@ -1,0 +1,50 @@
+{
+    "main_color": "",
+    "secondary_color": "",
+    "currency_symbol": "",
+    "currency_position": "left",
+    "currency_thousands": ",",
+    "courses_page": "2",
+    "courses_view": "grid",
+    "courses_per_page": "8",
+    "course_card_view": "right",
+    "courses_categories_slug": "course",
+    "payment_methods": {
+        "cash": {
+            "enabled": true,
+            "fields": {
+                "description": "Pay in our office"
+            }
+        },
+        "wire_transfer": {
+            "enabled": true,
+            "fields": {
+                "account_number": "32432432510954",
+                "holder_name": "Holder Name",
+                "bank_name": "OFB",
+                "swift": "900325984",
+                "description": "Pay via Wire Transfer"
+            }
+        },
+        "paypal": {
+            "enabled": true,
+            "fields": {
+                "paypal_email": "",
+                "currency_code": "",
+                "paypal_mode": "sandbox",
+                "description": ""
+            }
+        },
+        "stripe": {
+            "enabled": true,
+            "fields": {
+                "stripe_public_api_key": "",
+                "secret_key": "",
+                "description": ""
+            }
+        }
+    },
+    "recaptcha_site_key": "",
+    "recaptcha_private_key": "",
+    "instructors_page": "1151"
+}
