@@ -1,0 +1,84 @@
+# WordPress core (reinstallable)
+/wp-admin/
+/wp-includes/
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config-sample.php
+/wp-config.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# WP Content - generated/cached
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/uploads/
+/wp-content/debug.log
+/wp-content/plugins-bad/
+/wp-content/ai1wm-backups/
+/wp-content/languages/
+/wp-content/autoptimize_404_handler.php
+/wp-content/masterstudy-lms-learning-management-system/
+
+# Plugins (installed via composer/download on deploy)
+/wp-content/plugins/elementor/
+/wp-content/plugins/header-footer-elementor/
+/wp-content/plugins/js_composer/
+/wp-content/plugins/revslider/
+/wp-content/plugins/woocommerce/
+/wp-content/plugins/masterstudy-lms-learning-management-system/
+/wp-content/plugins/masterstudy-lms-learning-management-system-pro/
+/wp-content/plugins/masterstudy-elementor-widgets/
+/wp-content/plugins/stm-post-type/
+/wp-content/plugins/stm-gdpr-compliance/
+/wp-content/plugins/addtoany/
+/wp-content/plugins/add-to-any/
+/wp-content/webtoffee_export/
+/wp-content/plugins/breadcrumb-navxt/
+/wp-content/plugins/buddypress/
+/wp-content/plugins/contact-form-7/
+/wp-content/plugins/paid-memberships-pro/
+/wp-content/plugins/envato-market/
+
+# Theme parent (installed from package)
+/wp-content/themes/masterstudy/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentytwo/
+
+# Sensitive files
+auth.json
+.env
+.user.ini
+*.ppk
+*.pem
+
+# Database dumps
+*.sql
+*.sql.gz
+*.wpress
+
+# Dependencies
+/vendor/
+composer.lock
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+__MACOSX/
+.idea/
+.vscode/
+*.swp
+*.swo
+node_modules/
+/.ftpquota
+/php.ini
