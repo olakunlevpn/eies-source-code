@@ -5,7 +5,7 @@
 
 set -e
 
-SITE_DIR="/home/marceloeies/testeoprevio.eies.com.bo"
+SITE_DIR="/home/marceloeies/public_html/testeoprevio"
 WP_VERSION="6.9.4"
 DB_NAME="marceloeies_testeo"
 DB_USER="marceloeies_soporte"

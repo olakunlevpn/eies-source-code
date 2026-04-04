@@ -4,7 +4,7 @@
 
 EIES (Escuela Internacional Para la Educación Superior) currently runs Moodle 3.7.1 at `virtual.eies.com.bo` with 221 courses, 6,558 users, and 52GB of course files. The goal is to migrate everything to WordPress + MasterStudy LMS, eliminating Moodle entirely.
 
-**Demo domain:** `testeoprevio.eies.com.bo` → `/public_html/pretesting`
+**Demo domain:** `testeoprevio.eies.com.bo` → `/public_html/testeoprevio`
 **Final domain:** `eies.com.bo`
 **Local dev:** `eies.test` (DB: `eies_fresh`, Moodle data: `moodle_eies`)
 
@@ -220,7 +220,7 @@ The plugin will:
 ## Deployment Plan
 
 1. **Local development** — Build and test migration script on `eies.test`
-2. **Set up demo** — Install WordPress on `testeoprevio.eies.com.bo` (`/public_html/pretesting`)
+2. **Set up demo** — Install WordPress on `testeoprevio.eies.com.bo` (`/public_html/testeoprevio`)
 3. **Run migration on server** — Script reads from `marceloeies_moodle` DB and `/public_html/moodle-datos/filedir/` directly
 4. **Test on demo** — Verify all courses, users, files, quizzes work
 5. **Move to production** — Switch to main domain `eies.com.bo`
