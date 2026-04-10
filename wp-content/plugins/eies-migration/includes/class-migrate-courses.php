@@ -40,10 +40,17 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 			$summary = $this->clean_moodle_html( $course->summary );
 
 			// Create course post
+			// Generate excerpt from summary (strip HTML, trim to 300 chars)
+			$excerpt = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $summary ) ) );
+			if ( strlen( $excerpt ) > 300 ) {
+				$excerpt = substr( $excerpt, 0, 297 ) . '...';
+			}
+
 			$post_id = wp_insert_post( array(
 				'post_type'    => 'stm-courses',
 				'post_title'   => trim( $course->fullname ),
 				'post_content' => $summary,
+				'post_excerpt' => $excerpt,
 				'post_status'  => $course->visible ? 'publish' : 'draft',
 				'post_author'  => $wp_author,
 				'post_date'    => date( 'Y-m-d H:i:s', $course->startdate ),
