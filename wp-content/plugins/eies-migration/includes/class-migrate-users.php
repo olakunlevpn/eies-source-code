@@ -3,21 +3,27 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 class EIES_Migrate_Users extends EIES_Migration_Base {
 
+	private $batch_size = 200;
+
 	public function run() {
 		$user_table = $this->moodle_table( 'user' );
-		// I2 FIX: Also filter suspended users
-		$users = $this->moodle_db->get_results(
-			"SELECT id, username, email, firstname, lastname, city, country, description
-			 FROM {$user_table}
-			 WHERE deleted = 0 AND suspended = 0 AND id > 1 AND email != ''
-			 ORDER BY id ASC"
+
+		// Get total count first
+		$total = (int) $this->moodle_db->get_var(
+			"SELECT COUNT(*) FROM {$user_table} WHERE deleted = 0 AND suspended = 0 AND id > 1 AND email != ''"
 		);
 
-		if ( empty( $users ) ) {
+		if ( ! $total ) {
 			return array( 'success' => false, 'message' => 'No users found in Moodle.' );
 		}
 
-		// Get role assignments from Moodle
+		// Check how many already migrated
+		$already_done = $this->get_mapping_count( 'user' );
+		if ( $already_done >= $total ) {
+			return array( 'success' => true, 'message' => sprintf( 'All %d users already migrated.', $already_done ) );
+		}
+
+		// Get role assignments (small dataset, load once)
 		$role_table = $this->moodle_table( 'role_assignments' );
 		$roles_table = $this->moodle_table( 'role' );
 		$role_map = $this->moodle_db->get_results(
@@ -35,91 +41,105 @@ class EIES_Migrate_Users extends EIES_Migration_Base {
 			$user_roles[ $rm->userid ][] = $rm->shortname;
 		}
 
+		// Process in batches
+		$offset = 0;
 		$count = 0;
 		$skipped = 0;
 
-		foreach ( $users as $user ) {
-			// Skip if already migrated
-			if ( $this->get_wp_id( 'user', $user->id ) ) {
-				$count++;
-				continue;
-			}
+		while ( $offset < $total ) {
+			$users = $this->moodle_db->get_results(
+				$this->moodle_db->prepare(
+					"SELECT id, username, email, firstname, lastname, city, country, description
+					 FROM {$user_table}
+					 WHERE deleted = 0 AND suspended = 0 AND id > 1 AND email != ''
+					 ORDER BY id ASC
+					 LIMIT %d OFFSET %d",
+					$this->batch_size, $offset
+				)
+			);
 
-			// Skip if email already exists in WP
-			if ( email_exists( $user->email ) ) {
-				$existing_id = email_exists( $user->email );
-				$this->save_mapping( 'user', $user->id, $existing_id );
-				$count++;
-				continue;
-			}
+			if ( empty( $users ) ) break;
 
-			// Sanitize username
-			$username = sanitize_user( $user->username, true );
-			if ( empty( $username ) ) {
-				$username = sanitize_user( $user->firstname . '.' . $user->lastname, true );
-			}
-
-			// Ensure unique username
-			$original = $username;
-			$i = 1;
-			while ( username_exists( $username ) ) {
-				$username = $original . $i;
-				$i++;
-			}
-
-			// Determine WP role
-			$wp_role = 'subscriber'; // default for students
-			$is_instructor = false;
-
-			// I4 FIX: Higher privilege roles take precedence
-			if ( isset( $user_roles[ $user->id ] ) ) {
-				$roles = $user_roles[ $user->id ];
-				if ( in_array( 'editingteacher', $roles, true ) || in_array( 'teacher', $roles, true ) ) {
-					$wp_role = 'author';
-					$is_instructor = true;
+			foreach ( $users as $user ) {
+				if ( $this->get_wp_id( 'user', $user->id ) ) {
+					$count++;
+					continue;
 				}
-				if ( in_array( 'manager', $roles, true ) ) {
-					$wp_role = 'editor';
+
+				if ( email_exists( $user->email ) ) {
+					$existing_id = email_exists( $user->email );
+					$this->save_mapping( 'user', $user->id, $existing_id );
+					$count++;
+					continue;
 				}
+
+				$username = sanitize_user( $user->username, true );
+				if ( empty( $username ) ) {
+					$username = sanitize_user( $user->firstname . '.' . $user->lastname, true );
+				}
+
+				$original = $username;
+				$i = 1;
+				while ( username_exists( $username ) ) {
+					$username = $original . $i;
+					$i++;
+				}
+
+				$wp_role = 'subscriber';
+				$is_instructor = false;
+
+				if ( isset( $user_roles[ $user->id ] ) ) {
+					$roles = $user_roles[ $user->id ];
+					if ( in_array( 'editingteacher', $roles, true ) || in_array( 'teacher', $roles, true ) ) {
+						$wp_role = 'author';
+						$is_instructor = true;
+					}
+					if ( in_array( 'manager', $roles, true ) ) {
+						$wp_role = 'editor';
+					}
+				}
+
+				$wp_user_id = wp_insert_user( array(
+					'user_login'   => $username,
+					'user_email'   => $user->email,
+					'first_name'   => $user->firstname,
+					'last_name'    => $user->lastname,
+					'display_name' => trim( $user->firstname . ' ' . $user->lastname ),
+					'description'  => $user->description ?? '',
+					'user_pass'    => wp_generate_password( 16, true, true ),
+					'role'         => $wp_role,
+				) );
+
+				if ( is_wp_error( $wp_user_id ) ) {
+					$skipped++;
+					continue;
+				}
+
+				if ( $is_instructor ) {
+					$wp_user = new WP_User( $wp_user_id );
+					$wp_user->add_cap( 'stm_lms_instructor' );
+				}
+
+				if ( ! empty( $user->city ) ) {
+					update_user_meta( $wp_user_id, 'stm_lms_city', $user->city );
+				}
+				if ( ! empty( $user->country ) ) {
+					update_user_meta( $wp_user_id, 'stm_lms_country', $user->country );
+				}
+
+				$this->save_mapping( 'user', $user->id, $wp_user_id );
+				$count++;
 			}
 
-			$wp_user_id = wp_insert_user( array(
-				'user_login'   => $username,
-				'user_email'   => $user->email,
-				'first_name'   => $user->firstname,
-				'last_name'    => $user->lastname,
-				'display_name' => trim( $user->firstname . ' ' . $user->lastname ),
-				'description'  => $user->description ?? '',
-				'user_pass'    => wp_generate_password( 16, true, true ),
-				'role'         => $wp_role,
-			) );
-
-			if ( is_wp_error( $wp_user_id ) ) {
-				$skipped++;
-				continue;
-			}
-
-			// Set instructor capability
-			if ( $is_instructor ) {
-				$wp_user = new WP_User( $wp_user_id );
-				$wp_user->add_cap( 'stm_lms_instructor' );
-			}
-
-			// Save location meta
-			if ( ! empty( $user->city ) ) {
-				update_user_meta( $wp_user_id, 'stm_lms_city', $user->city );
-			}
-			if ( ! empty( $user->country ) ) {
-				update_user_meta( $wp_user_id, 'stm_lms_country', $user->country );
-			}
-
-			$this->save_mapping( 'user', $user->id, $wp_user_id );
-			$count++;
+			$offset += $this->batch_size;
 		}
 
-		return array(
-			'success' => true,
-			'message' => sprintf( '%d users migrated, %d skipped.', $count, $skipped ),
-		);
+		$remaining = $total - $count - $skipped;
+		$msg = sprintf( '%d users migrated, %d skipped.', $count, $skipped );
+		if ( $remaining > 0 ) {
+			$msg .= sprintf( ' Click Run again for remaining %d.', $remaining );
+		}
+
+		return array( 'success' => true, 'message' => $msg );
 	}
 }
