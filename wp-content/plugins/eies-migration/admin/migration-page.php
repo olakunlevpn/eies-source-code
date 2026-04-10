@@ -63,6 +63,14 @@ if ( $map_exists ) {
 				<td id="status-enrollments"><?php echo $counts['enrollments'] > 0 ? $counts['enrollments'] . ' migrated' : 'Pending'; ?></td>
 				<td><button class="button button-primary eies-migrate-btn" data-step="enrollments"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
+			<tr>
+				<td><strong>6. <?php esc_html_e( 'Files & Images', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Course images, lesson files, user avatars', 'eies-migration' ); ?></small></td>
+				<td id="status-files"><?php
+					$file_count = $map_exists ? (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$map_table} WHERE entity_type LIKE 'file_%'" ) : 0;
+					echo $file_count > 0 ? $file_count . ' migrated' : 'Pending';
+				?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="files"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
 		</tbody>
 	</table>
 
