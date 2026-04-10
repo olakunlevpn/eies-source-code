@@ -46,6 +46,7 @@ require_once EIES_MIGRATION_PATH . 'includes/class-migrate-courses.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-quizzes.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-enrollments.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-files.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-data.php';
 
 add_action( 'admin_menu', 'eies_migration_menu' );
 
@@ -103,6 +104,10 @@ function eies_handle_migration() {
 			break;
 		case 'files':
 			$migrator = new EIES_Migrate_Files();
+			$result   = $migrator->run();
+			break;
+		case 'wp_data':
+			$migrator = new EIES_Migrate_WP_Data();
 			$result   = $migrator->run();
 			break;
 		case 'reset':

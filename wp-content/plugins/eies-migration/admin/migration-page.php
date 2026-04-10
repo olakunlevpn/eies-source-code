@@ -71,6 +71,11 @@ if ( $map_exists ) {
 				?></td>
 				<td><button class="button button-primary eies-migrate-btn" data-step="files"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
+			<tr>
+				<td><strong>7. <?php esc_html_e( 'Old WordPress Data', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Import images, descriptions, prices from old eies.com.bo WooCommerce products', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_data"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_data"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
 		</tbody>
 	</table>
 
