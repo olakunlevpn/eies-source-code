@@ -13,23 +13,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'EIES_MIGRATION_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EIES_MIGRATION_URL', plugin_dir_url( __FILE__ ) );
 
-// Moodle DB config - auto-detect local vs server
-if ( file_exists( '/home/marceloeies/public_html/cursos/config.php' ) ) {
-	// Server environment
+// C1 FIX: Moodle DB config from wp-config.php defines or fallback to local dev
+// On server, add these to wp-config.php:
+// define( 'MOODLE_DB_HOST', 'localhost' );
+// define( 'MOODLE_DB_NAME', 'marceloeies_moodle' );
+// define( 'MOODLE_DB_USER', 'marceloeies_soporte' );
+// define( 'MOODLE_DB_PASS', 'your_password_here' );
+// define( 'MOODLE_DATA_PATH', '/home/marceloeies/public_html/moodle-datos/filedir/' );
+if ( ! defined( 'MOODLE_DB_HOST' ) ) {
 	define( 'MOODLE_DB_HOST', 'localhost' );
-	define( 'MOODLE_DB_NAME', 'marceloeies_moodle' );
-	define( 'MOODLE_DB_USER', 'marceloeies_soporte' );
-	define( 'MOODLE_DB_PASS', 'WXVCfhz(AOSp' );
-	define( 'MOODLE_DATA_PATH', '/home/marceloeies/public_html/moodle-datos/filedir/' );
-} else {
-	// Local development
-	define( 'MOODLE_DB_HOST', 'localhost' );
+}
+if ( ! defined( 'MOODLE_DB_NAME' ) ) {
 	define( 'MOODLE_DB_NAME', 'moodle_eies' );
+}
+if ( ! defined( 'MOODLE_DB_USER' ) ) {
 	define( 'MOODLE_DB_USER', 'root' );
+}
+if ( ! defined( 'MOODLE_DB_PASS' ) ) {
 	define( 'MOODLE_DB_PASS', '' );
+}
+if ( ! defined( 'MOODLE_DATA_PATH' ) ) {
 	define( 'MOODLE_DATA_PATH', '' );
 }
-define( 'MOODLE_DB_PREFIX', 'mdl_' );
+if ( ! defined( 'MOODLE_DB_PREFIX' ) ) {
+	define( 'MOODLE_DB_PREFIX', 'mdl_' );
+}
 
 require_once EIES_MIGRATION_PATH . 'includes/class-migration-base.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-categories.php';

@@ -19,7 +19,17 @@ class EIES_Migration_Base {
 			MOODLE_DB_NAME,
 			MOODLE_DB_HOST
 		);
+		// I1 FIX: Check connection succeeded
+		if ( ! $this->moodle_db->dbh ) {
+			wp_die( 'Failed to connect to Moodle database. Check credentials in eies-migration.php. Error: ' . $this->moodle_db->last_error );
+		}
 		$this->moodle_db->set_charset( $this->moodle_db->dbh, 'utf8mb4' );
+	}
+
+	protected function clean_moodle_html( $html ) {
+		if ( empty( $html ) ) return '';
+		$html = preg_replace( '/@@PLUGINFILE@@/', '', $html );
+		return wp_kses_post( $html );
 	}
 
 	protected function moodle_table( $name ) {

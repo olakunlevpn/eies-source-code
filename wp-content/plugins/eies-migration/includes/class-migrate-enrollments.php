@@ -96,7 +96,8 @@ class EIES_Migrate_Enrollments extends EIES_Migration_Base {
 
 		if ( $grade && $grade->grademax > 0 && $grade->finalgrade !== null ) {
 			$percent = round( ( $grade->finalgrade / $grade->grademax ) * 100, 2 );
-			$final_grade = round( $grade->finalgrade, 2 );
+			// C8 FIX: Convert to percentage (0-100), cap at 127 for TINYINT column
+			$final_grade = min( round( ( $grade->finalgrade / $grade->grademax ) * 100 ), 127 );
 		}
 
 		// Also check completion

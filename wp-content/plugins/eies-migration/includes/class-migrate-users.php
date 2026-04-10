@@ -5,10 +5,11 @@ class EIES_Migrate_Users extends EIES_Migration_Base {
 
 	public function run() {
 		$user_table = $this->moodle_table( 'user' );
+		// I2 FIX: Also filter suspended users
 		$users = $this->moodle_db->get_results(
 			"SELECT id, username, email, firstname, lastname, city, country, description
 			 FROM {$user_table}
-			 WHERE deleted = 0 AND id > 1 AND email != ''
+			 WHERE deleted = 0 AND suspended = 0 AND id > 1 AND email != ''
 			 ORDER BY id ASC"
 		);
 
@@ -70,14 +71,15 @@ class EIES_Migrate_Users extends EIES_Migration_Base {
 			$wp_role = 'subscriber'; // default for students
 			$is_instructor = false;
 
+			// I4 FIX: Higher privilege roles take precedence
 			if ( isset( $user_roles[ $user->id ] ) ) {
 				$roles = $user_roles[ $user->id ];
-				if ( in_array( 'manager', $roles, true ) ) {
-					$wp_role = 'editor';
-				}
 				if ( in_array( 'editingteacher', $roles, true ) || in_array( 'teacher', $roles, true ) ) {
 					$wp_role = 'author';
 					$is_instructor = true;
+				}
+				if ( in_array( 'manager', $roles, true ) ) {
+					$wp_role = 'editor';
 				}
 			}
 

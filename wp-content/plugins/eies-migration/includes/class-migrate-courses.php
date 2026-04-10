@@ -37,7 +37,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 			}
 
 			// Clean summary HTML
-			$summary = $this->clean_html( $course->summary );
+			$summary = $this->clean_moodle_html( $course->summary );
 
 			// Create course post
 			$post_id = wp_insert_post( array(
@@ -221,7 +221,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 		if ( ! $resource ) return null;
 
-		$content = $this->clean_html( $resource->intro );
+		$content = $this->clean_moodle_html( $resource->intro );
 
 		// Get associated file info
 		$file_info = $this->get_activity_file_info( $cm->id, 'mod_resource', 'content' );
@@ -255,7 +255,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 		if ( ! $page ) return null;
 
-		$content = $this->clean_html( $page->content );
+		$content = $this->clean_moodle_html( $page->content );
 
 		$post_id = wp_insert_post( array(
 			'post_type'    => 'stm-lessons',
@@ -279,7 +279,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 		if ( ! $url ) return null;
 
-		$content = $this->clean_html( $url->intro );
+		$content = $this->clean_moodle_html( $url->intro );
 		$content .= sprintf( "\n\n<p><a href=\"%s\" target=\"_blank\">%s</a></p>", esc_url( $url->externalurl ), esc_html( $url->name ) );
 
 		// Check if it's a video URL
@@ -323,7 +323,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		$post_id = wp_insert_post( array(
 			'post_type'    => 'stm-lessons',
 			'post_title'   => $title,
-			'post_content' => $this->clean_html( $label->intro ),
+			'post_content' => $this->clean_moodle_html( $label->intro ),
 			'post_status'  => $cm->visible ? 'publish' : 'draft',
 			'post_author'  => get_post_field( 'post_author', $wp_course_id ),
 		) );
@@ -342,7 +342,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 		if ( ! $folder ) return null;
 
-		$content = $this->clean_html( $folder->intro );
+		$content = $this->clean_moodle_html( $folder->intro );
 		$content .= "\n\n<!-- Moodle folder - files need to be migrated -->";
 
 		$post_id = wp_insert_post( array(
@@ -367,7 +367,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 		if ( ! $forum ) return null;
 
-		$content = $this->clean_html( $forum->intro );
+		$content = $this->clean_moodle_html( $forum->intro );
 
 		$post_id = wp_insert_post( array(
 			'post_type'    => 'stm-lessons',
@@ -394,7 +394,7 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		$post_id = wp_insert_post( array(
 			'post_type'    => 'stm-assignments',
 			'post_title'   => trim( $assign->name ),
-			'post_content' => $this->clean_html( $assign->intro ),
+			'post_content' => $this->clean_moodle_html( $assign->intro ),
 			'post_status'  => $cm->visible ? 'publish' : 'draft',
 			'post_author'  => get_post_field( 'post_author', $wp_course_id ),
 		) );
@@ -428,10 +428,4 @@ class EIES_Migrate_Courses extends EIES_Migration_Base {
 		);
 	}
 
-	private function clean_html( $html ) {
-		if ( empty( $html ) ) return '';
-		// Fix Moodle's pluginfile URLs - will be updated when files are migrated
-		$html = preg_replace( '/@@PLUGINFILE@@/', '', $html );
-		return wp_kses_post( $html );
-	}
 }
