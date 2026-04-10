@@ -47,6 +47,10 @@ require_once EIES_MIGRATION_PATH . 'includes/class-migrate-quizzes.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-enrollments.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-files.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-data.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-users.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-products.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-orders.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-content.php';
 
 add_action( 'admin_menu', 'eies_migration_menu' );
 
@@ -108,6 +112,22 @@ function eies_handle_migration() {
 			break;
 		case 'wp_data':
 			$migrator = new EIES_Migrate_WP_Data();
+			$result   = $migrator->run();
+			break;
+		case 'wp_users':
+			$migrator = new EIES_Migrate_WP_Users();
+			$result   = $migrator->run();
+			break;
+		case 'wp_products':
+			$migrator = new EIES_Migrate_WP_Products();
+			$result   = $migrator->run();
+			break;
+		case 'wp_orders':
+			$migrator = new EIES_Migrate_WP_Orders();
+			$result   = $migrator->run();
+			break;
+		case 'wp_content':
+			$migrator = new EIES_Migrate_WP_Content();
 			$result   = $migrator->run();
 			break;
 		case 'reset':

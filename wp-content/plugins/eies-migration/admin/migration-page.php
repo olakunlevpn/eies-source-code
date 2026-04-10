@@ -76,6 +76,38 @@ if ( $map_exists ) {
 				<td id="status-wp_data"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
 				<td><button class="button button-primary eies-migrate-btn" data-step="wp_data"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
+			<tr style="background: #f0f6fc;">
+				<td colspan="3"><strong><?php esc_html_e( 'Phase 2: WordPress Data Migration', 'eies-migration' ); ?></strong></td>
+			</tr>
+			<tr>
+				<td><strong>8. <?php esc_html_e( 'Merge/Import WP Users', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( '9,234 WP users — merge 5,623 existing + import 3,609 new with billing data', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_users"><?php
+					$wp_user_count = $map_exists ? (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$map_table} WHERE entity_type = 'wp_user'" ) : 0;
+					echo $wp_user_count > 0 ? $wp_user_count . ' processed' : 'Pending';
+				?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_users"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>9. <?php esc_html_e( 'Import WP Products as Courses', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( '87 WP-only products → MasterStudy courses with images, prices, categories', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_products"><?php
+					$wp_prod_count = $map_exists ? (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$map_table} WHERE entity_type = 'wp_product'" ) : 0;
+					echo $wp_prod_count > 0 ? $wp_prod_count . ' processed' : 'Pending';
+				?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_products"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>10. <?php esc_html_e( 'Import WooCommerce Orders', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( '4,003 orders with items, notes, and user mapping', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_orders"><?php
+					$wp_order_count = $map_exists ? (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$map_table} WHERE entity_type = 'wp_order'" ) : 0;
+					echo $wp_order_count > 0 ? $wp_order_count . ' imported' : 'Pending';
+				?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_orders"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>11. <?php esc_html_e( 'Reviews, Custom Tables, Testimonials, Coupons', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( '667 reviews, sys_evaluaciones, sys_lista_correos, 6 testimonials, 5 coupons', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_content"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_content"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
 		</tbody>
 	</table>
 
