@@ -332,9 +332,4 @@ class EIES_Migrate_Quizzes extends EIES_Migration_Base {
 		}
 	}
 
-	private function clean_moodle_html( $html ) {
-		if ( empty( $html ) ) return '';
-		$html = preg_replace( '/@@PLUGINFILE@@/', '', $html );
-		return wp_kses_post( $html );
-	}
 }
