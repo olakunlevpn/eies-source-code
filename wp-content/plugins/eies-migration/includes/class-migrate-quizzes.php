@@ -149,7 +149,8 @@ class EIES_Migrate_Quizzes extends EIES_Migration_Base {
 		}
 
 		if ( ! empty( $question_ids ) ) {
-			update_post_meta( $wp_quiz_id, 'questions', $question_ids );
+			// MasterStudy expects comma-separated string, NOT array
+			update_post_meta( $wp_quiz_id, 'questions', implode( ',', $question_ids ) );
 		}
 
 		return array( 'count' => $count, 'skipped_random' => $skipped_random );
