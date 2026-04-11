@@ -226,23 +226,20 @@ class EIES_Migrate_Quizzes extends EIES_Migration_Base {
 
 			case 'gapselect':
 			case 'ddwtos':
-				// C7 FIX: Build pipe-delimited format for fill_the_gap
-				// MasterStudy expects: "The |correct| word in the |gap|"
+				// C1 FIX: Gapselect uses position-based answers, not fraction
+				// [[N]] references the Nth answer by row position (1-indexed)
 				$text = wp_strip_all_tags( $question_text );
-				// Moodle uses [[1]], [[2]] etc as placeholders
-				// Build a map of group number to correct answer
-				$answer_map = array();
+				// Build position map: index 1,2,3... → answer text
+				$answer_by_position = array();
+				$pos = 1;
 				foreach ( $answers as $a ) {
-					if ( $a->fraction > 0 ) {
-						// Moodle gapselect answers have implicit ordering matching [[N]]
-						$answer_map[] = wp_strip_all_tags( $a->answer );
-					}
+					$answer_by_position[ $pos ] = wp_strip_all_tags( $a->answer );
+					$pos++;
 				}
 				// Replace [[1]], [[2]], etc with |answer|
-				$idx = 0;
-				$text = preg_replace_callback( '/\[\[(\d+)\]\]/', function( $m ) use ( &$idx, $answer_map ) {
-					$answer = isset( $answer_map[ $idx ] ) ? $answer_map[ $idx ] : '___';
-					$idx++;
+				$text = preg_replace_callback( '/\[\[(\d+)\]\]/', function( $m ) use ( $answer_by_position ) {
+					$n = (int) $m[1];
+					$answer = isset( $answer_by_position[ $n ] ) ? $answer_by_position[ $n ] : '___';
 					return '|' . $answer . '|';
 				}, $text );
 

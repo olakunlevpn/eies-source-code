@@ -272,12 +272,17 @@ class EIES_Migrate_Files extends EIES_Migration_Base {
 			'post_status'    => 'inherit',
 		);
 
+		// M4 FIX: Pass absolute path for file processing, then fix the stored path
 		$attachment_id = wp_insert_attachment( $attachment, $target );
 
 		if ( is_wp_error( $attachment_id ) || ! $attachment_id ) {
 			@unlink( $target );
 			return false;
 		}
+
+		// M4 FIX: Ensure _wp_attached_file stores relative path for portability
+		$rel_path = ltrim( $upload_dir['subdir'] . '/' . $filename, '/' );
+		update_post_meta( $attachment_id, '_wp_attached_file', $rel_path );
 
 		// I2 FIX: Only generate metadata for images
 		if ( strpos( $file->mimetype, 'image/' ) === 0 ) {

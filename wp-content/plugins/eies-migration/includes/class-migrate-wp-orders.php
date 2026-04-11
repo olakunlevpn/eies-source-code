@@ -184,12 +184,22 @@ class EIES_Migrate_WP_Orders extends EIES_Migration_Base {
 				);
 
 				foreach ( $item_metas as $im ) {
+					$value = $im->meta_value;
+
+					// H6 FIX: Remap product IDs to new course IDs
+					if ( in_array( $im->meta_key, array( '_product_id', '_variation_id' ), true ) && $value > 0 ) {
+						$new_id = $this->get_wp_id( 'wp_product', $value );
+						if ( $new_id && $new_id > 0 ) {
+							$value = $new_id;
+						}
+					}
+
 					$wpdb->insert(
 						$wpdb->prefix . 'woocommerce_order_itemmeta',
 						array(
 							'order_item_id' => $new_item_id,
 							'meta_key'      => $im->meta_key,
-							'meta_value'    => $im->meta_value,
+							'meta_value'    => $value,
 						)
 					);
 				}
