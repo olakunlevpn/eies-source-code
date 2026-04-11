@@ -51,6 +51,7 @@ require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-users.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-products.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-orders.php';
 require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-content.php';
+require_once EIES_MIGRATION_PATH . 'includes/class-migrate-wp-settings.php';
 
 add_action( 'admin_menu', 'eies_migration_menu' );
 
@@ -128,6 +129,10 @@ function eies_handle_migration() {
 			break;
 		case 'wp_content':
 			$migrator = new EIES_Migrate_WP_Content();
+			$result   = $migrator->run();
+			break;
+		case 'wp_settings':
+			$migrator = new EIES_Migrate_WP_Settings();
 			$result   = $migrator->run();
 			break;
 		case 'reset':

@@ -104,9 +104,14 @@ if ( $map_exists ) {
 				<td><button class="button button-primary eies-migrate-btn" data-step="wp_orders"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
 			<tr>
-				<td><strong>11. <?php esc_html_e( 'Reviews, Custom Tables, Testimonials, Coupons', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( '667 reviews, sys_evaluaciones, sys_lista_correos, 6 testimonials, 5 coupons', 'eies-migration' ); ?></small></td>
+				<td><strong>11. <?php esc_html_e( 'Reviews, Custom Tables, Testimonials, Coupons', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Reviews, sys_evaluaciones, sys_lista_correos, 6 testimonials, 5 coupons', 'eies-migration' ); ?></small></td>
 				<td id="status-wp_content"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
 				<td><button class="button button-primary eies-migrate-btn" data-step="wp_content"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12. <?php esc_html_e( 'Site Settings, Pages, Media, Forms, Menu', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Site identity, WooCommerce settings (BOB currency), 13 pages, 635 media files, 6 CF7 forms, main menu', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
 		</tbody>
 	</table>
