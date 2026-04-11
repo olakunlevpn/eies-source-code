@@ -255,6 +255,11 @@ class EIES_Migrate_WP_Products extends EIES_Migration_Base {
 			return false;
 		}
 
+		// M4 FIX: Store relative path for portability
+		$upload_dir = wp_upload_dir();
+		$rel_path = ltrim( $upload_dir['subdir'] . '/' . $filename, '/' );
+		update_post_meta( $att_id, '_wp_attached_file', $rel_path );
+
 		if ( strpos( $mime_type, 'image/' ) === 0 ) {
 			$metadata = wp_generate_attachment_metadata( $att_id, $target );
 			wp_update_attachment_metadata( $att_id, $metadata );

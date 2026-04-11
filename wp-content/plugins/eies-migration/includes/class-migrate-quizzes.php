@@ -226,20 +226,24 @@ class EIES_Migrate_Quizzes extends EIES_Migration_Base {
 
 			case 'gapselect':
 			case 'ddwtos':
-				// C1 FIX: Gapselect uses position-based answers, not fraction
-				// [[N]] references the Nth answer by row position (1-indexed)
+				// C1 FIX v3: [[N]] references answer GROUP N (stored in feedback field)
+				// First answer per group (lowest id) is the correct one
 				$text = wp_strip_all_tags( $question_text );
-				// Build position map: index 1,2,3... → answer text
-				$answer_by_position = array();
-				$pos = 1;
+
+				// Build group map: group_number → first answer text
+				// feedback field = group number, first row per group = correct answer
+				$group_map = array();
 				foreach ( $answers as $a ) {
-					$answer_by_position[ $pos ] = wp_strip_all_tags( $a->answer );
-					$pos++;
+					$grp = (int) ( $a->feedback ?? 0 );
+					if ( $grp > 0 && ! isset( $group_map[ $grp ] ) ) {
+						$group_map[ $grp ] = wp_strip_all_tags( $a->answer );
+					}
 				}
-				// Replace [[1]], [[2]], etc with |answer|
-				$text = preg_replace_callback( '/\[\[(\d+)\]\]/', function( $m ) use ( $answer_by_position ) {
+
+				// Replace [[1]], [[2]], etc with |answer_from_group_N|
+				$text = preg_replace_callback( '/\[\[(\d+)\]\]/', function( $m ) use ( $group_map ) {
 					$n = (int) $m[1];
-					$answer = isset( $answer_by_position[ $n ] ) ? $answer_by_position[ $n ] : '___';
+					$answer = isset( $group_map[ $n ] ) ? $group_map[ $n ] : '___';
 					return '|' . $answer . '|';
 				}, $text );
 
