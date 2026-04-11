@@ -13,8 +13,12 @@ class EIES_Migrate_WP_Settings extends EIES_Migration_Base {
 		}
 
 		$results = array();
+		$results[] = $this->install_required_plugins();
 		$results[] = $this->migrate_site_identity();
 		$results[] = $this->migrate_woocommerce_settings();
+		$results[] = $this->migrate_payment_gateways();
+		$results[] = $this->migrate_currency_switcher();
+		$results[] = $this->migrate_ar_contactus();
 		$results[] = $this->migrate_pages();
 		$results[] = $this->migrate_media();
 		$results[] = $this->migrate_cf7_forms();
@@ -359,6 +363,208 @@ class EIES_Migrate_WP_Settings extends EIES_Migration_Base {
 		$content = str_replace( 'https://eies.com.bo', 'https://testeoprevio.eies.com.bo', $content );
 		$content = str_replace( 'http://eies.test', 'https://testeoprevio.eies.com.bo', $content );
 		return $content;
+	}
+
+	private function install_required_plugins() {
+		require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+		require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+
+		$installed = array();
+		$failed = array();
+
+		// 1. LiveES Checkout — copy from plugins-bad if available on server
+		$livees_source = ABSPATH . 'wp-content/plugins-bad/livees-checkout/';
+		$livees_target = WP_PLUGIN_DIR . '/livees-checkout/';
+		if ( ! is_dir( $livees_target ) && is_dir( $livees_source ) ) {
+			$this->copy_directory( $livees_source, $livees_target );
+			if ( is_dir( $livees_target ) ) {
+				activate_plugin( 'livees-checkout/livees-checkout.php' );
+				$installed[] = 'livees-checkout';
+			}
+		} elseif ( is_dir( $livees_target ) ) {
+			if ( ! is_plugin_active( 'livees-checkout/livees-checkout.php' ) ) {
+				activate_plugin( 'livees-checkout/livees-checkout.php' );
+			}
+			$installed[] = 'livees-checkout (already installed)';
+		}
+
+		// 2. Free plugins from wordpress.org
+		$free_plugins = array(
+			'woocommerce-currency-switcher' => 'woocommerce-currency-switcher/index.php',
+			'pymntpl-paypal-woocommerce'    => 'pymntpl-paypal-woocommerce/pymntpl-paypal-woocommerce.php',
+			'ar-contactus'                  => 'ar-contactus/ar-contactus.php',
+		);
+
+		foreach ( $free_plugins as $slug => $plugin_file ) {
+			if ( is_dir( WP_PLUGIN_DIR . '/' . $slug ) ) {
+				if ( ! is_plugin_active( $plugin_file ) ) {
+					activate_plugin( $plugin_file );
+				}
+				$installed[] = $slug . ' (already installed)';
+				continue;
+			}
+
+			// Download from wordpress.org
+			$url = "https://downloads.wordpress.org/plugin/{$slug}.latest-stable.zip";
+			$tmp = download_url( $url );
+
+			if ( is_wp_error( $tmp ) ) {
+				$failed[] = $slug;
+				continue;
+			}
+
+			$result = unzip_file( $tmp, WP_PLUGIN_DIR );
+			@unlink( $tmp );
+
+			if ( is_wp_error( $result ) ) {
+				$failed[] = $slug;
+				continue;
+			}
+
+			activate_plugin( $plugin_file );
+			$installed[] = $slug;
+		}
+
+		$msg = 'Plugins installed: ' . implode( ', ', $installed );
+		if ( ! empty( $failed ) ) {
+			$msg .= '. Failed: ' . implode( ', ', $failed );
+		}
+
+		return array( 'success' => empty( $failed ), 'message' => $msg );
+	}
+
+	private function migrate_payment_gateways() {
+		$gateway_options = array(
+			'woocommerce_bacs_settings',
+			'woocommerce_lckout_settings',
+			'woocommerce_paypal_settings',
+			'woocommerce_ppcp_settings',
+			'woocommerce_ppcp_advanced_settings',
+			'woocommerce_ppcp_api_settings',
+			'woocommerce_ppcp_googlepay_settings',
+			'woocommerce-ppcp-version',
+		);
+
+		$count = 0;
+		foreach ( $gateway_options as $key ) {
+			$val = $this->old_db->get_var(
+				$this->old_db->prepare( "SELECT option_value FROM wp_options WHERE option_name = %s", $key )
+			);
+			if ( $val !== null && $val !== '' ) {
+				update_option( $key, maybe_unserialize( $val ) );
+				$count++;
+			}
+		}
+
+		return array( 'success' => true, 'message' => sprintf( 'Payment gateways: %d settings.', $count ) );
+	}
+
+	private function migrate_currency_switcher() {
+		// Get all WOOCS options
+		$woocs_options = $this->old_db->get_results(
+			"SELECT option_name, option_value FROM wp_options WHERE option_name LIKE 'woocs%'"
+		);
+
+		$count = 0;
+		foreach ( $woocs_options as $opt ) {
+			update_option( $opt->option_name, maybe_unserialize( $opt->option_value ) );
+			$count++;
+		}
+
+		return array( 'success' => true, 'message' => sprintf( 'Currency switcher: %d settings.', $count ) );
+	}
+
+	private function migrate_ar_contactus() {
+		global $wpdb;
+
+		// Check if ar_contactus table exists in old DB
+		$table_exists = $this->old_db->get_var( "SHOW TABLES LIKE 'wp_arcontactus'" );
+		if ( ! $table_exists ) {
+			return array( 'success' => true, 'message' => 'AR Contactus: no data.' );
+		}
+
+		// Create table if not exists in new DB
+		$new_table = $wpdb->prefix . 'arcontactus';
+		if ( ! $wpdb->get_var( "SHOW TABLES LIKE '{$new_table}'" ) ) {
+			$create = $this->old_db->get_row( "SHOW CREATE TABLE wp_arcontactus", ARRAY_N );
+			if ( $create && isset( $create[1] ) ) {
+				// Replace old prefix with new
+				$sql = str_replace( 'wp_arcontactus', $new_table, $create[1] );
+				$wpdb->query( $sql );
+			}
+		}
+
+		// Copy contacts
+		$contacts = $this->old_db->get_results( "SELECT * FROM wp_arcontactus" );
+		$count = 0;
+
+		// Clear existing
+		$wpdb->query( "TRUNCATE TABLE {$new_table}" );
+
+		foreach ( $contacts as $contact ) {
+			$data = (array) $contact;
+			$wpdb->insert( $new_table, $data );
+			$count++;
+		}
+
+		// Copy related tables
+		$related_tables = array(
+			'wp_arcontactus_callback',
+			'wp_arcontactus_lang',
+			'wp_arcontactus_prompt',
+			'wp_arcontactus_prompt_lang',
+		);
+
+		foreach ( $related_tables as $table ) {
+			$new_name = str_replace( 'wp_', $wpdb->prefix, $table );
+			$old_exists = $this->old_db->get_var( "SHOW TABLES LIKE '{$table}'" );
+			if ( ! $old_exists ) continue;
+
+			if ( ! $wpdb->get_var( "SHOW TABLES LIKE '{$new_name}'" ) ) {
+				$create = $this->old_db->get_row( "SHOW CREATE TABLE {$table}", ARRAY_N );
+				if ( $create && isset( $create[1] ) ) {
+					$sql = str_replace( $table, $new_name, $create[1] );
+					$wpdb->query( $sql );
+				}
+			}
+
+			$rows = $this->old_db->get_results( "SELECT * FROM {$table}" );
+			$existing = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$new_name}" );
+			if ( $existing === 0 ) {
+				foreach ( $rows as $row ) {
+					$wpdb->insert( $new_name, (array) $row );
+				}
+			}
+		}
+
+		// Copy AR Contactus options
+		$ar_options = $this->old_db->get_results(
+			"SELECT option_name, option_value FROM wp_options WHERE option_name LIKE 'ar_contactus%'"
+		);
+		foreach ( $ar_options as $opt ) {
+			update_option( $opt->option_name, maybe_unserialize( $opt->option_value ) );
+		}
+
+		return array( 'success' => true, 'message' => sprintf( 'AR Contactus: %d contacts.', $count ) );
+	}
+
+	private function copy_directory( $src, $dst ) {
+		if ( ! is_dir( $src ) ) return;
+		if ( ! is_dir( $dst ) ) mkdir( $dst, 0755, true );
+
+		$dir = opendir( $src );
+		while ( ( $file = readdir( $dir ) ) !== false ) {
+			if ( $file === '.' || $file === '..' ) continue;
+			$src_path = $src . '/' . $file;
+			$dst_path = $dst . '/' . $file;
+			if ( is_dir( $src_path ) ) {
+				$this->copy_directory( $src_path, $dst_path );
+			} else {
+				copy( $src_path, $dst_path );
+			}
+		}
+		closedir( $dir );
 	}
 
 	private function connect_old_wp() {
