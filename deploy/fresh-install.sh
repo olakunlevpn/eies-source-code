@@ -146,76 +146,17 @@ mkdir -p "$SITE_DIR/wp-content/uploads"
 chmod -R 777 "$SITE_DIR/wp-content/uploads"
 echo "  Done."
 
-# Step 9: Install WordPress via CLI
+# Step 9: Install WordPress via PHP script
 echo "[9/9] Installing WordPress..."
+cp /tmp/eies-source-code/deploy/wp-setup.php "$SITE_DIR/wp-setup.php" 2>/dev/null || true
+if [ ! -f "$SITE_DIR/wp-setup.php" ]; then
+    # Fetch from git if not copied
+    curl -sL "https://raw.githubusercontent.com/olakunlevpn/eies-source-code/main/deploy/wp-setup.php" -o "$SITE_DIR/wp-setup.php"
+fi
 cd "$SITE_DIR"
-
-# Use PHP to run the WP installer
-php -r "
-define('ABSPATH', '$SITE_DIR/');
-define('WP_INSTALLING', true);
-define('WP_ADMIN', true);
-
-\$_SERVER['HTTP_HOST'] = 'testeoprevio.eies.com.bo';
-\$_SERVER['REQUEST_URI'] = '/wp-admin/install.php';
-\$_SERVER['SERVER_PROTOCOL'] = 'HTTP/1.1';
-
-require_once ABSPATH . 'wp-load.php';
-require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-
-wp_install('EIES', '$ADMIN_USER', '$ADMIN_EMAIL', true, '', wp_slash('$ADMIN_PASS'));
-
-// Set siteurl and home
-update_option('siteurl', '$SITE_URL');
-update_option('home', '$SITE_URL');
-
-// Activate MasterStudy theme
-switch_theme('masterstudy');
-
-// Activate core plugins
-\$plugins = array(
-    'masterstudy-lms-learning-management-system/masterstudy-lms-learning-management-system.php',
-    'masterstudy-lms-learning-management-system-pro/masterstudy-lms-learning-management-system-pro.php',
-    'masterstudy-elementor-widgets/masterstudy-elementor-widgets.php',
-    'stm-post-type/stm-post-type.php',
-    'stm-gdpr-compliance/stm-gdpr-compliance.php',
-    'elementor/elementor.php',
-    'header-footer-elementor/header-footer-elementor.php',
-    'js_composer/js_composer.php',
-    'revslider/revslider.php',
-    'woocommerce/woocommerce.php',
-    'contact-form-7/wp-contact-form-7.php',
-    'breadcrumb-navxt/breadcrumb-navxt.php',
-    'buddypress/bp-loader.php',
-    'paid-memberships-pro/paid-memberships-pro.php',
-    'add-to-any/addtoany.php',
-    'envato-market/envato-market.php',
-    'eies-migration/eies-migration.php',
-);
-
-require_once ABSPATH . 'wp-admin/includes/plugin.php';
-foreach (\$plugins as \$p) {
-    if (file_exists(WP_PLUGIN_DIR . '/' . \$p)) {
-        activate_plugin(\$p);
-    }
-}
-
-// Create migration mapping table
-global \$wpdb;
-\$charset = \$wpdb->get_charset_collate();
-\$table = \$wpdb->prefix . 'eies_migration_map';
-\$wpdb->query(\"CREATE TABLE IF NOT EXISTS {\$table} (
-    id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    entity_type varchar(50) NOT NULL,
-    moodle_id bigint(20) unsigned NOT NULL,
-    wp_id bigint(20) unsigned NOT NULL,
-    PRIMARY KEY (id),
-    UNIQUE KEY entity_moodle (entity_type, moodle_id),
-    KEY wp_id (wp_id)
-) {\$charset}\");
-
-echo 'WordPress installed and configured!';
-"
+php wp-setup.php
+rm -f "$SITE_DIR/wp-setup.php"
+echo "  Done."
 
 echo ""
 echo "=== Fresh Install Complete ==="
