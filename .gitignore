@@ -76,3 +76,4 @@ node_modules/
 docs/
 deploy-pull.sh
 auto-deploy.sh
+*.zip
