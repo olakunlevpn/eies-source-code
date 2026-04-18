@@ -55,6 +55,7 @@ class EIES_Cert_Admin {
 		$moodle_total   = is_array( $stats ) ? $stats['total'] : 0;
 		$already_done   = is_array( $stats ) ? $stats['done'] : 0;
 		$new_available  = is_array( $stats ) ? $stats['new_available'] : 0;
+		$moodle_online  = is_array( $stats ) ? ! empty( $stats['moodle_online'] ) : false;
 		$has_new        = $new_available > 0;
 		$btn_label      = $already_done > 0
 			? ( $has_new
@@ -65,6 +66,7 @@ class EIES_Cert_Admin {
 		<div class="wrap">
 			<h1><?php esc_html_e( 'Certificados EIES', 'eies-certificates' ); ?></h1>
 
+			<?php if ( $moodle_online ) : ?>
 			<div style="background:#fff;padding:16px;border:1px solid #ccd0d4;margin:16px 0;border-radius:4px;">
 				<strong><?php esc_html_e( 'Sincronización con Moodle', 'eies-certificates' ); ?></strong>
 				<p style="margin:8px 0;">
@@ -81,6 +83,7 @@ class EIES_Cert_Admin {
 					<?php esc_html_e( 'Seguro para ejecutar varias veces — solo añade certificados nuevos, nunca duplica.', 'eies-certificates' ); ?>
 				</p>
 			</div>
+			<?php endif; ?>
 
 			<form method="get" style="margin:16px 0;">
 				<input type="hidden" name="page" value="eies-certificates">

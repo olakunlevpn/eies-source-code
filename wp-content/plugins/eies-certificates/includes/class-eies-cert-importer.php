@@ -27,7 +27,13 @@ class EIES_Cert_Importer {
 			'done'          => 0,
 			'remaining'     => 0,
 			'new_available' => 0,
+			'moodle_online' => false,
 		);
+	}
+
+	public static function is_moodle_online() {
+		$mdb = self::moodle_db();
+		return ! is_wp_error( $mdb );
 	}
 
 	public static function count_remaining() {
@@ -46,6 +52,7 @@ class EIES_Cert_Importer {
 			'done'          => $done,
 			'remaining'     => max( 0, $total - $done ),
 			'new_available' => $new_count,
+			'moodle_online' => true,
 		);
 	}
 
