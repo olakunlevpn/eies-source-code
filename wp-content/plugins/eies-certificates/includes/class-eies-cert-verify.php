@@ -76,9 +76,9 @@ class EIES_Cert_Verify {
 		?>
 		<h2 style="margin-bottom:8px;"><?php esc_html_e( 'Verificar Certificado', 'eies-certificates' ); ?></h2>
 		<p style="color:#555;margin-top:0;"><?php esc_html_e( 'Ingrese el código único del certificado para verificar su autenticidad.', 'eies-certificates' ); ?></p>
-		<form method="get" action="<?php echo $action; ?>" style="margin:20px 0;">
-			<input type="text" name="code" value="<?php echo esc_attr( $code ); ?>" placeholder="<?php esc_attr_e( 'Código de certificado', 'eies-certificates' ); ?>" required style="padding:10px;width:70%;border:1px solid #ccc;border-radius:4px;font-size:15px;">
-			<button type="submit" style="padding:10px 20px;background:#0073aa;color:#fff;border:0;border-radius:4px;cursor:pointer;font-size:15px;"><?php esc_html_e( 'Verificar', 'eies-certificates' ); ?></button>
+		<form method="get" action="<?php echo $action; ?>" style="margin:20px 0;display:flex;gap:10px;align-items:stretch;">
+			<input type="text" name="code" value="<?php echo esc_attr( $code ); ?>" placeholder="<?php esc_attr_e( 'Código de certificado', 'eies-certificates' ); ?>" required style="padding:10px 14px;flex:1;border:1px solid #ccc;border-radius:4px;font-size:15px;">
+			<button type="submit" style="padding:10px 24px;background:#0073aa;color:#fff;border:0;border-radius:4px;cursor:pointer;font-size:15px;white-space:nowrap;"><?php esc_html_e( 'Verificar', 'eies-certificates' ); ?></button>
 		</form>
 		<?php
 	}
