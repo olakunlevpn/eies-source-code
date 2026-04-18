@@ -54,6 +54,7 @@ $plugins = array(
 	'add-to-any/addtoany.php',
 	'envato-market/envato-market.php',
 	'eies-migration/eies-migration.php',
+	'eies-certificates/eies-certificates.php',
 );
 
 $activated = 0;
