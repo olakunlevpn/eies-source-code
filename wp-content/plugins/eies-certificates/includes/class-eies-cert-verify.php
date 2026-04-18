@@ -66,7 +66,13 @@ class EIES_Cert_Verify {
 	}
 
 	private function render_form( $code ) {
-		$action = esc_url( get_permalink() ? get_permalink() : home_url( '/verificar-certificado/' ) );
+		$is_verify_endpoint = (bool) get_query_var( 'eies_verify' );
+		if ( $is_verify_endpoint ) {
+			$action = home_url( '/verificar-certificado/' );
+		} else {
+			$action = get_permalink() ? get_permalink() : home_url( '/verificar-certificado/' );
+		}
+		$action = esc_url( $action );
 		?>
 		<h2 style="margin-bottom:8px;"><?php esc_html_e( 'Verificar Certificado', 'eies-certificates' ); ?></h2>
 		<p style="color:#555;margin-top:0;"><?php esc_html_e( 'Ingrese el código único del certificado para verificar su autenticidad.', 'eies-certificates' ); ?></p>
