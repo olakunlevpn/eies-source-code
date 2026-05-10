@@ -32,6 +32,41 @@ class EIES_Migrate_WP_Settings extends EIES_Migration_Base {
 		);
 	}
 
+	/**
+	 * Run a single sub-step. Used by granular AJAX handlers.
+	 * Always connects to old DB first.
+	 */
+	public function run_step( $step ) {
+		$this->connect_old_wp();
+		if ( ! $this->old_db || ! $this->old_db->dbh ) {
+			return array( 'success' => false, 'message' => 'Cannot connect to old WordPress database.' );
+		}
+
+		switch ( $step ) {
+			case 'plugins':
+				return $this->install_required_plugins();
+			case 'identity':
+				return $this->migrate_site_identity();
+			case 'wc':
+				return $this->migrate_woocommerce_settings();
+			case 'payment':
+				return $this->migrate_payment_gateways();
+			case 'currency':
+				return $this->migrate_currency_switcher();
+			case 'ar':
+				return $this->migrate_ar_contactus();
+			case 'pages':
+				return $this->migrate_pages();
+			case 'media':
+				return $this->migrate_media();
+			case 'cf7':
+				return $this->migrate_cf7_forms();
+			case 'menu':
+				return $this->migrate_menu();
+		}
+		return array( 'success' => false, 'message' => 'Unknown sub-step: ' . $step );
+	}
+
 	private function migrate_site_identity() {
 		$settings = array(
 			'blogname', 'blogdescription', 'admin_email', 'WPLANG',

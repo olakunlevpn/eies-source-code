@@ -135,6 +135,20 @@ function eies_handle_migration() {
 			$migrator = new EIES_Migrate_WP_Settings();
 			$result   = $migrator->run();
 			break;
+		case 'wp_settings_plugins':
+		case 'wp_settings_identity':
+		case 'wp_settings_wc':
+		case 'wp_settings_payment':
+		case 'wp_settings_currency':
+		case 'wp_settings_ar':
+		case 'wp_settings_pages':
+		case 'wp_settings_media':
+		case 'wp_settings_cf7':
+		case 'wp_settings_menu':
+			$sub      = substr( $step, strlen( 'wp_settings_' ) );
+			$migrator = new EIES_Migrate_WP_Settings();
+			$result   = $migrator->run_step( $sub );
+			break;
 		case 'reset':
 			$base = new EIES_Migration_Base();
 			$result = $base->reset_all();

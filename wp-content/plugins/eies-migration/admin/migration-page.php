@@ -108,13 +108,73 @@ if ( $map_exists ) {
 				<td id="status-wp_content"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
 				<td><button class="button button-primary eies-migrate-btn" data-step="wp_content"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
 			</tr>
+			<tr style="background: #fff8e5;">
+				<td colspan="3"><strong><?php esc_html_e( '12. Site Settings (granular sub-steps)', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Run each sub-step independently. Pay attention to safety badges — items marked UNSAFE may overwrite theme-specific content built for the old MasterStudy parent theme and break the new starter theme rendering.', 'eies-migration' ); ?></small></td>
+			</tr>
 			<tr>
-				<td><strong>12. <?php esc_html_e( 'Site Settings, Pages, Media, Forms, Menu', 'eies-migration' ); ?></strong><br><small><?php esc_html_e( 'Site identity, WooCommerce settings (BOB currency), 13 pages, 635 media files, 6 CF7 forms, main menu', 'eies-migration' ); ?></small></td>
+				<td><strong>12a. <?php esc_html_e( 'Required Plugins', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'Installs livees-checkout, woocommerce-currency-switcher, pymntpl-paypal-woocommerce, ar-contactus.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_plugins"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_plugins"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12b. <?php esc_html_e( 'Site Identity', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'blogname, tagline, admin email, language, timezone, date/time format, permalinks.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_identity"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_identity"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12c. <?php esc_html_e( 'WooCommerce Settings', 'eies-migration' ); ?></strong> <span class="eies-badge eies-warn">CAUTION</span><br><small><?php esc_html_e( 'Currency (BOB), price format, store address, plus binds Cart/Shop/Checkout/My-account WC pages. Best run AFTER pages exist (12f or theme defaults).', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_wc"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_wc"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12d. <?php esc_html_e( 'Payment Gateways', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'BACS, LCKout, PayPal, PPCP gateway settings.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_payment"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_payment"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12e. <?php esc_html_e( 'Currency Switcher (WOOCS)', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'All woocs_* options for multi-currency.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_currency"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_currency"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12f. <?php esc_html_e( '13 Pages (Inicio, Nosotros, Contacto, Tienda, Carrito, Mi cuenta, Galerías, etc.)', 'eies-migration' ); ?></strong> <span class="eies-badge eies-danger">UNSAFE</span><br><small style="color:#a00;"><?php esc_html_e( 'WARNING: Page content was built for the old full MasterStudy parent theme (Elementor + stm_mailchimp / stm_testimonials shortcodes that DO NOT exist in ms-lms-starter-theme). Importing will produce broken layouts and unprocessed shortcodes. Only run if you switch back to the full MasterStudy theme. Skip this if using ms-lms-starter-theme — use theme demo content instead.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_pages"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button eies-migrate-btn" style="background:#dc3545;color:#fff;border-color:#a00;" data-step="wp_settings_pages" data-confirm="Imports 13 pages built for OLD MasterStudy theme. Will break layout on ms-lms-starter-theme. Continue?"><?php esc_html_e( 'Run (Risky)', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12g. <?php esc_html_e( 'Media Library (635 files)', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'Copies attachments + metadata. Theme-agnostic.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_media"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_media"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12h. <?php esc_html_e( 'Contact Form 7 (6 forms)', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'CF7 form definitions + meta. Theme-agnostic.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_cf7"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_cf7"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12i. <?php esc_html_e( 'Main Menu', 'eies-migration' ); ?></strong> <span class="eies-badge eies-warn">CAUTION</span><br><small><?php esc_html_e( 'Creates "Main menu" with 6 items + assigns to "primary" location. Items reference imported pages (12f). On ms-lms-starter-theme the location key is ms-lms-starter-theme-main-menu — you may need to re-assign manually after import.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_menu"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_menu"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr>
+				<td><strong>12j. <?php esc_html_e( 'AR Contactus', 'eies-migration' ); ?></strong> <span class="eies-badge eies-safe">SAFE</span><br><small><?php esc_html_e( 'Custom contact tables + plugin options.', 'eies-migration' ); ?></small></td>
+				<td id="status-wp_settings_ar"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
+				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings_ar"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+			</tr>
+			<tr style="background: #f6f7f7;">
+				<td><strong>12. <?php esc_html_e( 'Run ALL of step 12 in sequence (legacy)', 'eies-migration' ); ?></strong> <span class="eies-badge eies-warn">INCLUDES UNSAFE</span><br><small><?php esc_html_e( 'Runs every sub-step above including 12f Pages. Kept for backward compatibility — prefer running sub-steps individually.', 'eies-migration' ); ?></small></td>
 				<td id="status-wp_settings"><?php esc_html_e( 'Pending', 'eies-migration' ); ?></td>
-				<td><button class="button button-primary eies-migrate-btn" data-step="wp_settings"><?php esc_html_e( 'Run', 'eies-migration' ); ?></button></td>
+				<td><button class="button eies-migrate-btn" style="background:#996600;color:#fff;border-color:#663300;" data-step="wp_settings" data-confirm="Runs ALL sub-steps including 12f Pages which breaks the starter theme. Continue?"><?php esc_html_e( 'Run All', 'eies-migration' ); ?></button></td>
 			</tr>
 		</tbody>
 	</table>
+
+	<style>
+		.eies-badge { display:inline-block; padding:2px 8px; border-radius:3px; font-size:11px; font-weight:600; vertical-align:middle; margin-left:6px; }
+		.eies-safe { background:#d4edda; color:#155724; border:1px solid #c3e6cb; }
+		.eies-warn { background:#fff3cd; color:#856404; border:1px solid #ffeaa7; }
+		.eies-danger { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; }
+	</style>
 
 	<br>
 	<button class="button button-secondary" id="eies-reset-btn" style="color: #a00;"><?php esc_html_e( 'Reset All Migrated Data', 'eies-migration' ); ?></button>
@@ -136,6 +196,8 @@ jQuery(document).ready(function($) {
 	$('.eies-migrate-btn').on('click', function() {
 		var $btn = $(this);
 		var step = $btn.data('step');
+		var confirmMsg = $btn.data('confirm');
+		if (confirmMsg && !confirm(confirmMsg)) return;
 		$btn.prop('disabled', true).text('Running...');
 		log('[' + new Date().toLocaleTimeString() + '] Starting ' + step + ' migration...');
 
