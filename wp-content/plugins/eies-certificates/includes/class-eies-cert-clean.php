@@ -16,8 +16,9 @@ class EIES_Cert_Clean {
 	public function detect() {
 		if ( ! is_singular( 'page' ) ) return;
 		global $post;
-		if ( ! $post || empty( $post->post_content ) ) return;
-		if ( false === strpos( $post->post_content, '[eies_certificate_verify]' ) ) return;
+		if ( ! $post ) return;
+
+		if ( ! $this->is_cert_page( $post ) ) return;
 
 		// Strip AddToAny share buttons.
 		if ( function_exists( 'A2A_SHARE_SAVE_addtoany_content_filter' ) ) {
@@ -27,8 +28,30 @@ class EIES_Cert_Clean {
 		add_filter( 'addtoany_filter_content_visibility', '__return_false' );
 
 		// Replace content with only shortcode output (defeats prepended/appended
-		// HTML from MasterStudy LMS templates that hijack certificate pages).
+		// HTML from MasterStudy LMS templates that hijack certificate pages and
+		// guarantees the verify form renders even if post_content is empty).
 		add_filter( 'the_content', array( $this, 'force_shortcode_only' ), PHP_INT_MAX );
+	}
+
+	private function is_cert_page( $post ) {
+		// Signal 1: shortcode literal in content.
+		if ( ! empty( $post->post_content ) && false !== strpos( $post->post_content, '[eies_certificate_verify]' ) ) {
+			return true;
+		}
+
+		// Signal 2: known cert page slugs.
+		$slugs = array( 'certificate-page', 'verificar-certificado', 'verify-certificate' );
+		if ( in_array( $post->post_name, $slugs, true ) ) {
+			return true;
+		}
+
+		// Signal 3: MasterStudy LMS cert page setting points at this post.
+		$stm = get_option( 'stm_lms_options', array() );
+		if ( is_array( $stm ) && ! empty( $stm['certificate_page'] ) && (int) $stm['certificate_page'] === (int) $post->ID ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public function force_shortcode_only( $content ) {
