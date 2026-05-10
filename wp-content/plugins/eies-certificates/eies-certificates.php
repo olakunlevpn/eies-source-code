@@ -24,6 +24,7 @@ require_once EIES_CERT_PATH . 'includes/class-eies-cert-install.php';
 require_once EIES_CERT_PATH . 'includes/class-eies-cert-importer.php';
 require_once EIES_CERT_PATH . 'includes/class-eies-cert-verify.php';
 require_once EIES_CERT_PATH . 'includes/class-eies-cert-admin.php';
+require_once EIES_CERT_PATH . 'includes/class-eies-cert-clean.php';
 
 register_activation_hook( __FILE__, array( 'EIES_Cert_Install', 'activate' ) );
 
